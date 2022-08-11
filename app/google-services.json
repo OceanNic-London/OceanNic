@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "805614727803",
+    "project_id": "oceannic-bbd17",
+    "storage_bucket": "oceannic-bbd17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805614727803:android:487eee241e76aaab05e8de",
+        "android_client_info": {
+          "package_name": "com.example.oceannic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "805614727803-2hn8rahoi250gne8kpt2ulf2dovl48ra.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oceannic",
+            "certificate_hash": "c66671356388651bf5785e6a74ab8edbe3e84f33"
+          }
+        },
+        {
+          "client_id": "805614727803-3cq5oog6iq0iibloni1jrnl60bpeo05e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqw68VCfkWoYTFzGSXbFBU2VXUZbrGWIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "805614727803-3cq5oog6iq0iibloni1jrnl60bpeo05e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

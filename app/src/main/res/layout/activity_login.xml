@@ -13,6 +13,7 @@
         android:layout_marginLeft="19dp"/>
 
     <ImageButton
+        android:id="@+id/login_google"
         android:layout_width="329dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="279dp"
@@ -20,6 +21,7 @@
         android:background="@android:color/transparent"
         android:src="@drawable/btn_google"/>
     <ImageButton
+        android:id="@+id/login_kakao"
         android:layout_width="329dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -27,6 +29,7 @@
         android:background="@android:color/transparent"
         android:src="@drawable/btn_kakao"/>
     <ImageButton
+        android:id="@+id/login_facebook"
         android:layout_width="329dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"

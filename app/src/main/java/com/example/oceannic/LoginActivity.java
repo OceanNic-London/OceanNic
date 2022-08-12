@@ -11,6 +11,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.facebook.AccessToken;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -21,15 +31,23 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FacebookAuthCredential;
+import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+
+import org.json.JSONObject;
+
+import java.util.Arrays;
 
 public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth; // 파이어베이스 인증 객체
     private GoogleSignInClient googleSignInClient;  // 구글 API 클라이언트 객체
     private static final int REQ_SIGN_GOOGLE = 100; // 구글 로그인 결과 코드
+
+    CallbackManager callbackManager;    // 페이스북 로그인 응답을 처리할 객체
 
     ImageButton btn_google, btn_kakao, btn_facebook;
 
@@ -58,6 +76,18 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        // 페이스북 로그인
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
+
+        callbackManager = CallbackManager.Factory.create();
+        btn_facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                facebookLogin();
+            }
+        });
+
     }
 
     // 현재 로그인 상태인지 확인
@@ -81,6 +111,8 @@ public class LoginActivity extends AppCompatActivity {
                 GoogleSignInAccount account = task.getResult();
                 firebaseAuthWithGoogle(account.getIdToken());
             }
+        }else{
+            callbackManager.onActivityResult(requestCode, resultCode, data);
         }
     }
 
@@ -111,5 +143,42 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+    }
+
+    // 페이스북 계정으로 로그인 시
+    private void facebookLogin(){
+        LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile", "email"));
+        LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                handleFacebookAccessToken(loginResult.getAccessToken());
+                Toast.makeText(getApplicationContext(), "페이스북 로그인 성공", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+
+            @Override
+            public void onCancel() {
+
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                Toast.makeText(getApplicationContext(), "페이스북 로그인 실패", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void handleFacebookAccessToken(AccessToken token){
+        Log.d("LoginActivity", "handleFacebookAccessToken : " + token);
+
+        GraphRequest graphRequest = GraphRequest.newMeRequest(token, new GraphRequest.GraphJSONObjectCallback() {
+            @Override
+            public void onCompleted(JSONObject object, GraphResponse response) {
+                Log.e("result", object.toString());
+            }
+        });
+
     }
 }

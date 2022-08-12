@@ -11,12 +11,11 @@
         android:layout_marginTop="77dp"
         android:layout_marginLeft="16dp"
         android:src="@drawable/text_category"/>
-
-
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
+                android:layout_gravity="center"
                 android:orientation="horizontal">
                 <FrameLayout
                     android:layout_width="wrap_content"
@@ -24,13 +23,12 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:layout_marginLeft="40dp"
+                        android:layout_gravity="center_horizontal"
                         android:layout_marginTop="19dp"
                         android:src="@drawable/oceandebris_test"/>
                     <ImageButton
                         android:layout_width="152dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
                         android:background="@android:color/transparent"
                         android:src="@drawable/round_infobox"/>
                     <TextView
@@ -55,6 +53,12 @@
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="65dp"
+                        android:layout_marginTop="58dp"
+                        android:src="@drawable/oceandebris_test"/>
                     <ImageButton
                         android:layout_width="152dp"
                         android:layout_height="wrap_content"
@@ -62,12 +66,6 @@
                         android:layout_marginLeft="40dp"
                         android:background="@android:color/transparent"
                         android:src="@drawable/round_infobox"/>
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="64dp"
-                        android:layout_marginTop="58dp"
-                        android:src="@drawable/oceandebris_test"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -89,8 +87,9 @@
                 </FrameLayout>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:orientation="horizontal">
                 <FrameLayout
                     android:layout_width="wrap_content"
@@ -101,13 +100,12 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:layout_marginLeft="40dp"
+                            android:layout_gravity="center_horizontal"
                             android:layout_marginTop="19dp"
                             android:src="@drawable/oceandebris_test"/>
                         <ImageButton
                             android:layout_width="152dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
                             android:background="@android:color/transparent"
                             android:src="@drawable/round_infobox"/>
                         <TextView

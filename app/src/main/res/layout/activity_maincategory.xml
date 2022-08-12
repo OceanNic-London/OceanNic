@@ -26,7 +26,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="19dp"
                         android:src="@drawable/oceandebris_test"/>
-                    <ImageButton
+                    <ImageView
                         android:layout_width="152dp"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
@@ -34,7 +34,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="26dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="134dp"
                         android:textColor="@color/white"
                         android:fontFamily="@font/pretendard_bold"
@@ -43,7 +43,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="26dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="156dp"
                         android:fontFamily="@font/pretendard_regular"
                         android:textSize="12sp"
@@ -59,7 +59,7 @@
                         android:layout_marginLeft="65dp"
                         android:layout_marginTop="58dp"
                         android:src="@drawable/oceandebris_test"/>
-                    <ImageButton
+                    <ImageView
                         android:layout_width="152dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="40dp"
@@ -103,7 +103,7 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="19dp"
                             android:src="@drawable/oceandebris_test"/>
-                        <ImageButton
+                        <ImageView
                             android:layout_width="152dp"
                             android:layout_height="wrap_content"
                             android:background="@android:color/transparent"
@@ -111,7 +111,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="26dp"
+                            android:layout_marginLeft="10dp"
                             android:layout_marginTop="134dp"
                             android:textColor="@color/white"
                             android:fontFamily="@font/pretendard_bold"
@@ -120,7 +120,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="26dp"
+                            android:layout_marginLeft="10dp"
                             android:layout_marginTop="156dp"
                             android:textSize="12sp"
                             android:fontFamily="@font/pretendard_regular"
@@ -131,19 +131,19 @@
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <ImageButton
-                        android:layout_width="152dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="40dp"
-                        android:background="@android:color/transparent"
-                        android:src="@drawable/round_infobox"/>
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginLeft="64dp"
                         android:layout_marginTop="58dp"
                         android:src="@drawable/oceandebris_test"/>
+                    <ImageView
+                        android:layout_width="152dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/round_infobox"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

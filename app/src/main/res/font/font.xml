@@ -27,4 +27,7 @@
     <font
         android:fontStyle="normal"
         android:font="@font/pretendard_thin"/>
+    <font
+        android:fontStyle="normal"
+        android:font="@font/kgthisisnotgoodbye"/>
 </font-family>

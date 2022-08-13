@@ -173,12 +173,19 @@ public class LoginActivity extends AppCompatActivity {
     private void handleFacebookAccessToken(AccessToken token){
         Log.d("LoginActivity", "handleFacebookAccessToken : " + token);
 
-        GraphRequest graphRequest = GraphRequest.newMeRequest(token, new GraphRequest.GraphJSONObjectCallback() {
-            @Override
-            public void onCompleted(JSONObject object, GraphResponse response) {
-                Log.e("result", object.toString());
-            }
-        });
+        AuthCredential credential = FacebookAuthProvider.getCredential(token.getToken());
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            updateUser(user);
+                        }else{
+                            Toast.makeText(getApplicationContext(), "Auth entication failed", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
 
     }
 }

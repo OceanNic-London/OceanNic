@@ -38,33 +38,33 @@ public class MainActivity extends AppCompatActivity {
             switch(menuItem.getItemId())
             {
                 case R.id.homeicon:
-                    menuItem.setIcon(R.drawable.icon_home_color);    // 선택한 이미지 변경
-                    menu.findItem(R.id.challengeicon).setIcon(R.drawable.icon_challenge);
-                    menu.findItem(R.id.infoicon).setIcon(R.drawable.icon_info);
-                    menu.findItem(R.id.myicon).setIcon(R.drawable.icon_mypage);
+                    menuItem.setIcon(R.drawable.ic_icon_home_svg);    // 선택한 이미지 변경
+                    menu.findItem(R.id.challengeicon).setIcon(R.drawable.ic_icon_challenge_svg);
+                    menu.findItem(R.id.infoicon).setIcon(R.drawable.ic_icon_info_svg);
+                    menu.findItem(R.id.myicon).setIcon(R.drawable.ic_icon_mypage_svg);
                     break;
 
                 case R.id.challengeicon:
-                    menuItem.setIcon(R.drawable.icon_challenge_color);    // 선택한 이미지 변경
-                    menu.findItem(R.id.homeicon).setIcon(R.drawable.icon_home);
-                    menu.findItem(R.id.infoicon).setIcon(R.drawable.icon_info);
-                    menu.findItem(R.id.myicon).setIcon(R.drawable.icon_mypage);
+                    menuItem.setIcon(R.drawable.ic_icon_challenge_svg);    // 선택한 이미지 변경
+                    menu.findItem(R.id.homeicon).setIcon(R.drawable.ic_icon_home_color);
+                    menu.findItem(R.id.infoicon).setIcon(R.drawable.ic_icon_info_color);
+                    menu.findItem(R.id.myicon).setIcon(R.drawable.ic_icon_mypage_color);
                     break;
 
                 case R.id.infoicon:
-                    menuItem.setIcon(R.drawable.icon_info_color);    // 선택한 이미지 변경
-                    menu.findItem(R.id.homeicon).setIcon(R.drawable.icon_home);
-                    menu.findItem(R.id.challengeicon).setIcon(R.drawable.icon_challenge);
-                    menu.findItem(R.id.myicon).setIcon(R.drawable.icon_mypage);
+                    menuItem.setIcon(R.drawable.ic_icon_info_svg);    // 선택한 이미지 변경
+                    menu.findItem(R.id.homeicon).setIcon(R.drawable.ic_icon_home_color);
+                    menu.findItem(R.id.challengeicon).setIcon(R.drawable.ic_icon_challenge_color);
+                    menu.findItem(R.id.myicon).setIcon(R.drawable.ic_icon_mypage_color);
 
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, categoryFragment).commitAllowingStateLoss();
                     break;
 
                 case R.id.myicon:
-                    menuItem.setIcon(R.drawable.icon_mypage_color);    // 선택한 이미지 변경
-                    menu.findItem(R.id.homeicon).setIcon(R.drawable.icon_home);
-                    menu.findItem(R.id.challengeicon).setIcon(R.drawable.icon_challenge);
-                    menu.findItem(R.id.infoicon).setIcon(R.drawable.icon_info);
+                    menuItem.setIcon(R.drawable.ic_icon_mypage_svg);    // 선택한 이미지 변경
+                    menu.findItem(R.id.homeicon).setIcon(R.drawable.ic_icon_home_color);
+                    menu.findItem(R.id.challengeicon).setIcon(R.drawable.ic_icon_challenge_color);
+                    menu.findItem(R.id.infoicon).setIcon(R.drawable.ic_icon_info_color);
                     break;
             }// switch()..
             return true;

@@ -5,24 +5,24 @@
         android:id="@+id/homeicon"
         app:showAsAction="always"
         android:enabled="true"
-        android:icon="@drawable/icon_home"
+        android:icon="@drawable/ic_icon_home_svg"
         android:title="TODO" />
     <item
         android:id="@+id/challengeicon"
         app:showAsAction="always"
         android:enabled="true"
-        android:icon="@drawable/icon_challenge"
+        android:icon="@drawable/ic_icon_challenge_svg"
         android:title="TODO" />
     <item
         android:id="@+id/infoicon"
         app:showAsAction="always"
         android:enabled="true"
-        android:icon="@drawable/icon_info"
+        android:icon="@drawable/ic_icon_info_svg"
         android:title="TODO" />
     <item
         android:id="@+id/myicon"
         app:showAsAction="always"
         android:enabled="true"
-        android:icon="@drawable/icon_mypage"
+        android:icon="@drawable/ic_icon_mypage_svg"
         android:title="TODO" />
 </menu>

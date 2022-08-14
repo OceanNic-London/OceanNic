@@ -18,6 +18,7 @@
         android:layout_gravity="center"
         android:orientation="horizontal">
         <FrameLayout
+            android:id="@+id/layout_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
@@ -51,6 +52,7 @@
                 android:text="info"/>
         </FrameLayout>
         <FrameLayout
+            android:id="@+id/layout_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
@@ -92,6 +94,7 @@
         android:layout_gravity="center"
         android:orientation="horizontal">
         <FrameLayout
+            android:id="@+id/layout_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <FrameLayout
@@ -129,6 +132,7 @@
             </FrameLayout>
         </FrameLayout>
         <FrameLayout
+            android:id="@+id/layout_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView

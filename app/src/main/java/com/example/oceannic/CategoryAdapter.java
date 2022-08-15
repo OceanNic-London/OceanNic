@@ -44,7 +44,7 @@ public class CategoryAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.adapter_posts, parent, false);
         }
 
-        txt_category = convertView.findViewById(R.id.txt_category);
+        txt_category = convertView.findViewById(R.id.txt_wasteName);
         txt_category.setText(debrisArrayList.get(position).getName());
 
         return convertView;

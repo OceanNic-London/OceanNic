@@ -14,8 +14,6 @@ import android.widget.FrameLayout;
 
 public class FragmentCategory extends Fragment {
 
-    ViewGroup viewGroup;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

@@ -6,7 +6,7 @@
         app:showAsAction="always"
         android:enabled="true"
         android:icon="@drawable/ic_icon_home_svg"
-        android:title="TODO" />
+        android:title="HOME" />
     <item
         android:id="@+id/challengeicon"
         app:showAsAction="always"
@@ -18,11 +18,11 @@
         app:showAsAction="always"
         android:enabled="true"
         android:icon="@drawable/ic_icon_info_svg"
-        android:title="TODO" />
+        android:title="INFO" />
     <item
         android:id="@+id/myicon"
         app:showAsAction="always"
         android:enabled="true"
         android:icon="@drawable/ic_icon_mypage_svg"
-        android:title="TODO" />
+        android:title="MY" />
 </menu>

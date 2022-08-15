@@ -6,14 +6,20 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    FragmentCategory categoryFragment;
+    private FragmentManager fragmentManager = getSupportFragmentManager();
+    private FragmentCategory categoryFragment = new FragmentCategory();
+    private FragmentChallenge challengeFragment = new FragmentChallenge();
+    private FragmentHome homeFragment = new FragmentHome();
+    private FragmentMypage mypageFragment = new FragmentMypage();
 
-    BottomNavigationView bottomNavigationView;
     Menu menu;
 
     @Override
@@ -21,17 +27,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        categoryFragment = new FragmentCategory();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fragment_container, categoryFragment).commitAllowingStateLoss();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,categoryFragment).commitAllowingStateLoss();
+        BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new ItemSelectedListener());
 
-        bottomNavigationView=findViewById(R.id.navigation);
         menu=bottomNavigationView.getMenu();
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new ItemSelectedListener());
-        bottomNavigationView.setSelectedItemId(R.id.homeicon);  //선택된 아이템 지정
-    }// onCreate()..
-
+    }
     class ItemSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener{
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -42,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
                     menu.findItem(R.id.challengeicon).setIcon(R.drawable.ic_icon_challenge_svg);
                     menu.findItem(R.id.infoicon).setIcon(R.drawable.ic_icon_info_svg);
                     menu.findItem(R.id.myicon).setIcon(R.drawable.ic_icon_mypage_svg);
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, homeFragment).commitAllowingStateLoss();
                     break;
 
                 case R.id.challengeicon:
@@ -49,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
                     menu.findItem(R.id.homeicon).setIcon(R.drawable.ic_icon_home_color);
                     menu.findItem(R.id.infoicon).setIcon(R.drawable.ic_icon_info_color);
                     menu.findItem(R.id.myicon).setIcon(R.drawable.ic_icon_mypage_color);
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, challengeFragment).commitAllowingStateLoss();
                     break;
 
                 case R.id.infoicon:
@@ -65,9 +73,11 @@ public class MainActivity extends AppCompatActivity {
                     menu.findItem(R.id.homeicon).setIcon(R.drawable.ic_icon_home_color);
                     menu.findItem(R.id.challengeicon).setIcon(R.drawable.ic_icon_challenge_color);
                     menu.findItem(R.id.infoicon).setIcon(R.drawable.ic_icon_info_color);
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mypageFragment).commitAllowingStateLoss();
                     break;
-            }// switch()..
+            }
             return true;
         }
-    }// ItemSelectedListener class..
-}// MainActivity class..
+    }
+}

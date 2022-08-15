@@ -15,7 +15,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/text_debris_title"
+        android:src="@drawable/title_debriscontnet"
         android:layout_marginTop="31dp"
         android:layout_marginLeft="16dp"/>
     <FrameLayout
@@ -206,8 +206,5 @@
                 android:layout_marginLeft="35dp"
                 android:layout_marginTop="48dp"/>
         </FrameLayout>
-
     </LinearLayout>
-
-
 </LinearLayout>

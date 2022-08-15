@@ -8,6 +8,7 @@ import android.widget.Adapter;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -30,12 +32,12 @@ public class FragmentInfo extends Fragment {
 
     ImageButton btn_back;
     TextView txt_category;
-    LinearLayout linear_scroll;
+    ListView list_category;
     HorizontalScrollView scrollView;
     FragmentTransaction transaction;
 
     ArrayList<OceanDebris> respone = new ArrayList<>();
-    Adapter adapter;
+    CategoryAdapter adapter;
 
     private DatabaseReference databaseReference;
 
@@ -52,8 +54,8 @@ public class FragmentInfo extends Fragment {
 
         btn_back = viewGroup.findViewById(R.id.btn_back);
         txt_category = viewGroup.findViewById(R.id.txt_category);
-        linear_scroll = viewGroup.findViewById(R.id.linear_scroll);
         scrollView= viewGroup.findViewById(R.id.scrollView);
+        list_category = viewGroup.findViewById(R.id.list_category);
 
         transaction = getActivity().getSupportFragmentManager().beginTransaction();
 
@@ -69,20 +71,26 @@ public class FragmentInfo extends Fragment {
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
-        databaseReference.child("debris").orderByChild(category).orderByChild("category").addChildEventListener(new ChildEventListener() {
+        databaseReference.child("debris").child(category).child("category").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+                System.out.println(snapshot.getValue().getClass());
+
                 if(snapshot.getValue(OceanDebris.class) != null){
                     OceanDebris oceanDebris = snapshot.getValue(OceanDebris.class);
 
                     String name = oceanDebris.getName();
+
                     respone.add(0, new OceanDebris(name));
 
                     adapter = new CategoryAdapter(respone);
-
+                    list_category.setAdapter(adapter);
 
                 }
-            }
+
+
+        }
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {

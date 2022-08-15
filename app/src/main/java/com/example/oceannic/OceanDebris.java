@@ -5,6 +5,8 @@ public class OceanDebris {
     private String description;
     private String years;
 
+    public OceanDebris() {}
+
     public OceanDebris(String name, String description, String years) {
         this.name = name;
         this.description = description;

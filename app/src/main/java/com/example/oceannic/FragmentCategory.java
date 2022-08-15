@@ -12,11 +12,11 @@ import android.view.ViewGroup;
 
 public class FragmentCategory extends Fragment {
 
-    ViewGroup viewGroup;
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_category,container,false);
-        return viewGroup;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_category, container, false);
+
+        return rootView;
     }
 }

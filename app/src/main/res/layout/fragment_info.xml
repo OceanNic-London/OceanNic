@@ -29,12 +29,14 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="106dp"
+        android:layout_marginTop="142dp"
         android:scrollbars="none">
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:gravity="center_vertical"
             android:orientation="horizontal">
             <FrameLayout
@@ -110,7 +112,6 @@
                     android:layout_marginLeft="140dp"/>
             </FrameLayout>
         </LinearLayout>
-
+        </ListView>
     </HorizontalScrollView>
-
 </LinearLayout>

@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private FragmentCategory categoryFragment = new FragmentCategory();
     private FragmentChallenge challengeFragment = new FragmentChallenge();
     //private FragmentHome homeFragment = new FragmentHome();
-   // private FragmentMypage mypageFragment = new FragmentMypage();
+    private FragmentMypage mypageFragment = new FragmentMypage();
 
     Menu menu;
 
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     menu.findItem(R.id.challengeicon).setIcon(R.drawable.ic_icon_challenge_color);
                     menu.findItem(R.id.infoicon).setIcon(R.drawable.ic_icon_info_color);
 
-                    //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mypageFragment).commitAllowingStateLoss();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mypageFragment).commitAllowingStateLoss();
                     break;
             }
             return true;

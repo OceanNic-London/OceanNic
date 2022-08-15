@@ -10,12 +10,14 @@
         android:layout_marginLeft="26dp"
         android:orientation="horizontal">
         <ImageButton
+            android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="75dp"
             android:background="@android:color/transparent"
             android:src="@drawable/btn_back"/>
         <TextView
+            android:id="@+id/txt_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PLASTIC"
@@ -32,86 +34,9 @@
         android:layout_marginTop="142dp"
         android:scrollbars="none">
         <ListView
+            android:id="@+id/list_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="18dp"
-                    android:src="@drawable/round_debris" />
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/oceandebris_test"
-                    android:layout_marginLeft="52dp"
-                    android:layout_marginTop="45dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="test"
-                    android:fontFamily="@font/pretendard_bold"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:layout_marginTop="255dp"
-                    android:layout_marginLeft="115dp"/>
-            </FrameLayout>
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="43dp"
-                    android:src="@drawable/round_debris" />
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/oceandebris_test"
-                    android:layout_marginLeft="77dp"
-                    android:layout_marginTop="45dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="test"
-                    android:fontFamily="@font/pretendard_bold"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:layout_marginTop="255dp"
-                    android:layout_marginLeft="140dp"/>
-            </FrameLayout>
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="43dp"
-                    android:src="@drawable/round_debris" />
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/oceandebris_test"
-                    android:layout_marginLeft="77dp"
-                    android:layout_marginTop="45dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="test"
-                    android:fontFamily="@font/pretendard_bold"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:layout_marginTop="255dp"
-                    android:layout_marginLeft="140dp"/>
-            </FrameLayout>
-        </LinearLayout>
         </ListView>
     </HorizontalScrollView>
 </LinearLayout>

@@ -15,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -32,7 +34,7 @@ public class FragmentInfo extends Fragment {
 
     ImageButton btn_back;
     TextView txt_category;
-    ListView list_category;
+    RecyclerView list_category;
     HorizontalScrollView scrollView;
     FragmentTransaction transaction;
 
@@ -55,7 +57,7 @@ public class FragmentInfo extends Fragment {
         btn_back = viewGroup.findViewById(R.id.btn_back);
         txt_category = viewGroup.findViewById(R.id.txt_category);
         scrollView= viewGroup.findViewById(R.id.scrollView);
-        list_category = viewGroup.findViewById(R.id.list_category);
+        list_category = viewGroup.findViewById(R.id.recyclerView);
 
         transaction = getActivity().getSupportFragmentManager().beginTransaction();
 
@@ -84,9 +86,9 @@ public class FragmentInfo extends Fragment {
 
                     respone.add(0, new OceanDebris(name));
 
-                    adapter = new CategoryAdapter(respone);
+                    adapter = new CategoryAdapter(respone, getContext());
                     list_category.setAdapter(adapter);
-
+                    list_category.setLayoutManager(new LinearLayoutManager(getContext()));
                 }
 
 

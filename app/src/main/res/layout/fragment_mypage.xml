@@ -20,6 +20,7 @@
             android:layout_marginRight="50px"
             android:layout_marginTop="80dp">
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/txt_userphoto"
                 android:layout_width="160px"
                 android:layout_height="160px"
                 android:src="@drawable/ic_launcher_background">
@@ -30,6 +31,7 @@
                 android:orientation="vertical"
                 android:layout_marginLeft="10dp">
                 <TextView
+                    android:id="@+id/txt_username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/pretendard_bold"
@@ -37,6 +39,7 @@
                     android:textSize="16sp"
                     android:textColor="@color/black"/>
                 <TextView
+                    android:id="@+id/txt_useremail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/pretendard_regular"
@@ -139,7 +142,8 @@
             android:layout_marginTop="17dp"
             android:layout_marginLeft="16dp"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/txt_logout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Log Out"
             android:fontFamily="@font/pretendard_regular"

@@ -1,5 +1,7 @@
 package com.example.oceannic;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -8,8 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -18,6 +18,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class ContentActivity extends AppCompatActivity {
 
@@ -26,7 +27,7 @@ public class ContentActivity extends AppCompatActivity {
 
     String category, name;
 
-    private FragmentManager fragmentManager = getSupportFragmentManager();
+    private FragmentManager fragmentManager = getFragmentManager();
     private DatabaseReference databaseReference;
 
     @Override
@@ -47,17 +48,17 @@ public class ContentActivity extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentInfo fragmentInfo = new FragmentInfo();
-                transaction.replace(R.id.fragment_container, fragmentInfo).commitAllowingStateLoss();
+                finish();
             }
         });
 
         txt_name.setText(name);
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
-        databaseReference.child("debris").child(category).child("category").addChildEventListener(new ChildEventListener() {
+        databaseReference.child("debris").child(category).child("category").child(name).addValueEventListener(new ValueEventListener() {
             @Override
-            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                System.out.println(snapshot + "   " + snapshot.getKey());
                 if(snapshot.getValue(OceanDebris.class) != null){
                     OceanDebris oceanDebris = snapshot.getValue(OceanDebris.class);
 
@@ -70,25 +71,11 @@ public class ContentActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-            }
-
-            @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
+
 
     }
 }

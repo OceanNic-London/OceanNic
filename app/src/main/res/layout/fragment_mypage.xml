@@ -16,10 +16,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="220px"
-            android:layout_marginLeft="50px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="49px"
             android:layout_marginTop="80dp"
-            android:layout_marginRight="50px"
             android:gravity="center_vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -56,30 +55,68 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
                 android:layout_marginTop="17dp"
                 android:fontFamily="@font/pretendard_regular"
                 android:text="You've come all the way here!"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25%"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="62dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50%"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="62dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="75%"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="62dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100%"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="62dp"/>
+            </LinearLayout>
 
             <ProgressBar
                 style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="343dp"
+                android:layout_width="344dp"
                 android:layout_height="10dp"
-                android:indeterminateOnly="false"
-                android:layout_marginLeft="16dp"
-                android:progressBackgroundTint="#F4F4F4"
-                android:progressTint="@color/main_color"
                 android:layout_marginTop="3dp"
-                android:progressDrawable="@drawable/mypage_progressbar"
+                android:indeterminateOnly="false"
                 android:max="100"
-                android:progress="10"/>
+                android:progress="10"
+                android:progressBackgroundTint="#F4F4F4"
+                android:progressDrawable="@drawable/mypage_progressbar"
+                android:progressTint="@color/main_color" />
         </LinearLayout>
 
         <LinearLayout
@@ -88,29 +125,157 @@
             android:layout_marginTop="23dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="101dp"
-                android:layout_height="101dp"
-                android:layout_marginLeft="16dp"
-                android:src="@drawable/round_mypagebox" />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="101dp"
-                android:layout_height="101dp"
-                android:layout_marginLeft="20dp"
-                android:src="@drawable/round_mypagebox" />
+                <ImageView
+                    android:layout_width="101dp"
+                    android:layout_height="101dp"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/round_mypagebox" />
 
-            <ImageView
-                android:layout_width="101dp"
-                android:layout_height="101dp"
-                android:layout_marginLeft="20dp"
-                android:src="@drawable/round_mypagebox" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="13dp"
+                    android:src="@drawable/ic_launcher_background"></de.hdodenhof.circleimageview.CircleImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="52dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="HISTORY"
+                    android:textColor="#C7C7C7"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="62dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="07"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="51dp"
+                    android:layout_marginTop="72dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="test"
+                    android:textColor="@color/black"
+                    android:textSize="6sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="101dp"
+                    android:layout_height="101dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/round_mypagebox" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="84dp"
+                    android:layout_marginTop="13dp"
+                    android:src="@drawable/ic_launcher_background"></de.hdodenhof.circleimageview.CircleImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="52dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="HISTO RY"
+                    android:textColor="#C7C7C7"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="62dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="07"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="54dp"
+                    android:layout_marginTop="72dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="test"
+                    android:textColor="@color/black"
+                    android:textSize="6sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="101dp"
+                    android:layout_height="101dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/round_mypagebox" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="84dp"
+                    android:layout_marginTop="13dp"
+                    android:src="@drawable/ic_launcher_background"></de.hdodenhof.circleimageview.CircleImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="52dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="HISTORY"
+                    android:textColor="#C7C7C7"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="62dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="07"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="54dp"
+                    android:layout_marginTop="72dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="test"
+                    android:textColor="@color/black"
+                    android:textSize="6sp" />
+            </FrameLayout>
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="173dp"
+        android:layout_height="183dp"
         android:layout_marginTop="10dp"
         android:orientation="vertical"
         android:background="@color/white">
@@ -150,7 +315,6 @@
             android:textSize="16sp"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="16dp"/>
-
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

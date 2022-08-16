@@ -24,11 +24,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="50dp"
+                android:layout_height="152dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="19dp"
-                android:src="@drawable/oceandebris_test"/>
+                android:src="@drawable/plastic_plasticbottle"/>
             <ImageView
                 android:layout_width="152dp"
                 android:layout_height="wrap_content"
@@ -62,7 +61,7 @@
                 android:layout_height="100dp"
                 android:layout_marginLeft="65dp"
                 android:layout_marginTop="58dp"
-                android:src="@drawable/oceandebris_test"/>
+                android:src="@drawable/paper_newspaper"/>
             <ImageView
                 android:layout_width="152dp"
                 android:layout_height="wrap_content"
@@ -107,7 +106,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="19dp"
-                    android:src="@drawable/oceandebris_test"/>
+                    android:src="@drawable/clothing_shirt"/>
                 <ImageView
                     android:layout_width="152dp"
                     android:layout_height="wrap_content"

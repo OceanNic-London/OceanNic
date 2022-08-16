@@ -3,11 +3,13 @@ package com.example.oceannic;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,6 +17,8 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -56,6 +60,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         TextView txt_wasteName;
         CardView cardview;
         Context context;
+        ImageView img_trash;
 
         String category;
 
@@ -66,6 +71,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
             txt_wasteName = itemView.findViewById(R.id.txt_wasteName);
             cardview = itemView.findViewById(R.id.cardview);
+            img_trash = itemView.findViewById(R.id.img_trash);
             this.context = context;
             this.category = category;
         }
@@ -75,6 +81,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             System.out.println(oceanDebris.getName() + "   " + txt_wasteName.getText());
 
             cardview.setCardBackgroundColor(Color.TRANSPARENT);
+
+            String file_name = category + "_" + oceanDebris.getName().replaceAll("\\s+","");
+
 
             itemView.setOnClickListener(v -> {
                 Intent intent = new Intent(context, ContentActivity.class);

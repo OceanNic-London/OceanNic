@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.Auth;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -54,7 +55,9 @@ public class FragmentMypage extends Fragment {
 
             txt_name.setText(name);
             txt_email.setText(email);
-            img_profile.setImageURI(photoUri);
+
+            String uri = String.valueOf(photoUri);
+            Glide.with(this).load(uri).into(img_profile);
         }
 
         txt_logout.setOnClickListener(new View.OnClickListener() {

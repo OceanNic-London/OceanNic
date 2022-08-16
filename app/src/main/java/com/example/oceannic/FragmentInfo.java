@@ -35,7 +35,6 @@ public class FragmentInfo extends Fragment {
     ImageButton btn_back;
     TextView txt_category;
     RecyclerView list_category;
-    HorizontalScrollView scrollView;
     FragmentTransaction transaction;
 
     ArrayList<OceanDebris> respone = new ArrayList<>();
@@ -56,13 +55,15 @@ public class FragmentInfo extends Fragment {
 
         btn_back = viewGroup.findViewById(R.id.btn_back);
         txt_category = viewGroup.findViewById(R.id.txt_category);
-        scrollView= viewGroup.findViewById(R.id.scrollView);
         list_category = viewGroup.findViewById(R.id.recyclerView);
 
         transaction = getActivity().getSupportFragmentManager().beginTransaction();
 
+        list_category.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
+
+
         // 카테고리 텍스트 변경
-        txt_category.setText(category);
+        txt_category.setText(category.toUpperCase());
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,7 +89,6 @@ public class FragmentInfo extends Fragment {
 
                     adapter = new CategoryAdapter(respone, getContext(), category);
                     list_category.setAdapter(adapter);
-                    list_category.setLayoutManager(new LinearLayoutManager(getContext()));
                 }
 
 

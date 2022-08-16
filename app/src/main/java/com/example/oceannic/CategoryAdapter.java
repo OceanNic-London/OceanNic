@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,11 +22,12 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
     ArrayList<OceanDebris> debrisArrayList = new ArrayList<>();
     Context context;
+    String category;
 
-    public CategoryAdapter(ArrayList<OceanDebris> respone, Context context) {
+    public CategoryAdapter(ArrayList<OceanDebris> respone, Context context, String category) {
         debrisArrayList = respone;
         this.context = context;
-
+        this.category = category;
     }
 
     @NonNull
@@ -34,7 +36,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
         View view = inflater.inflate(R.layout.adapter_posts, viewGroup, false);
 
-        return new ViewHolder(view, context);
+        return new ViewHolder(view, context, category);
     }
 
     @Override
@@ -55,12 +57,17 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         CardView cardview;
         Context context;
 
-        public ViewHolder(@NonNull View itemView, Context context) {
+        String category;
+
+        FragmentTransaction transaction;
+
+        public ViewHolder(@NonNull View itemView, Context context, String category) {
             super(itemView);
 
             txt_wasteName = itemView.findViewById(R.id.txt_wasteName);
             cardview = itemView.findViewById(R.id.cardview);
             this.context = context;
+            this.category = category;
         }
 
         public void setItem(OceanDebris oceanDebris){
@@ -69,11 +76,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
             cardview.setCardBackgroundColor(Color.TRANSPARENT);
 
-            cardview.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                }
+            itemView.setOnClickListener(v -> {
+                Intent intent = new Intent(context, ContentActivity.class);
+                intent.putExtra("name", oceanDebris.getName());
+                intent.putExtra("category", category);
+                context.startActivity(intent);
             });
         }
     }

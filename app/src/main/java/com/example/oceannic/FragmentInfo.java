@@ -86,7 +86,7 @@ public class FragmentInfo extends Fragment {
 
                     respone.add(0, new OceanDebris(name));
 
-                    adapter = new CategoryAdapter(respone, getContext());
+                    adapter = new CategoryAdapter(respone, getContext(), category);
                     list_category.setAdapter(adapter);
                     list_category.setLayoutManager(new LinearLayoutManager(getContext()));
                 }

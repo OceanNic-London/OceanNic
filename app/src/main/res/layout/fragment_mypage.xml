@@ -7,69 +7,107 @@
     android:orientation="vertical"
     tools:context=".FragmentMypage"
     android:background="@drawable/main_background">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="356dp"
-        android:orientation="vertical"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="220px"
-            android:gravity="center_vertical"
             android:layout_marginLeft="50px"
+            android:layout_marginTop="80dp"
             android:layout_marginRight="50px"
-            android:layout_marginTop="80dp">
+            android:gravity="center_vertical">
+
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/txt_userphoto"
                 android:layout_width="160px"
                 android:layout_height="160px"
-                android:src="@drawable/ic_launcher_background">
-            </de.hdodenhof.circleimageview.CircleImageView>
+                android:src="@drawable/ic_launcher_background"></de.hdodenhof.circleimageview.CircleImageView>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="10dp">
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/txt_username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/pretendard_bold"
                     android:text="name"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
                 <TextView
                     android:id="@+id/txt_useremail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="introduce"
-                    android:textSize="14sp"
                     android:layout_marginLeft="4px"
                     android:layout_marginTop="10dp"
-                    android:textColor="@color/black"/>
+                    android:fontFamily="@font/pretendard_regular"
+                    android:text="introduce"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/pretendard_regular"
+                android:text="You've come all the way here!"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="343dp"
+                android:layout_height="10dp"
+                android:indeterminateOnly="false"
+                android:layout_marginLeft="16dp"
+                android:progressBackgroundTint="#F4F4F4"
+                android:progressTint="@color/main_color"
+                android:layout_marginTop="3dp"
+                android:progressDrawable="@drawable/mypage_progressbar"
+                android:max="100"
+                android:progress="10"/>
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="23dp"
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="101dp"
                 android:layout_height="101dp"
-                android:src="@drawable/round_mypagebox"
-                android:layout_marginLeft="16dp"/>
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/round_mypagebox" />
+
             <ImageView
                 android:layout_width="101dp"
                 android:layout_height="101dp"
-                android:src="@drawable/round_mypagebox"
-                android:layout_marginLeft="20dp"/>
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/round_mypagebox" />
+
             <ImageView
                 android:layout_width="101dp"
                 android:layout_height="101dp"
-                android:src="@drawable/round_mypagebox"
-                android:layout_marginLeft="20dp"/>
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/round_mypagebox" />
         </LinearLayout>
     </LinearLayout>
 

@@ -15,10 +15,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     private FragmentManager fragmentManager = getSupportFragmentManager();
-    private FragmentCategory categoryFragment = new FragmentCategory();
-    private FragmentChallenge challengeFragment = new FragmentChallenge();
-    //private FragmentHome homeFragment = new FragmentHome();
-    private FragmentMypage mypageFragment = new FragmentMypage();
 
     Menu menu;
 
@@ -28,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.fragment_container, categoryFragment).commitAllowingStateLoss();
+        transaction.replace(R.id.fragment_container, new FragmentCategory()).commitAllowingStateLoss();
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new ItemSelectedListener());
@@ -56,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     menu.findItem(R.id.infoicon).setIcon(R.drawable.ic_icon_info_color);
                     menu.findItem(R.id.myicon).setIcon(R.drawable.ic_icon_mypage_color);
 
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, challengeFragment).commitAllowingStateLoss();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentChallenge()).commitAllowingStateLoss();
                     break;
 
                 case R.id.infoicon:
@@ -65,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     menu.findItem(R.id.challengeicon).setIcon(R.drawable.ic_icon_challenge_color);
                     menu.findItem(R.id.myicon).setIcon(R.drawable.ic_icon_mypage_color);
 
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, categoryFragment).commitAllowingStateLoss();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentCategory()).commitAllowingStateLoss();
                     break;
 
                 case R.id.myicon:
@@ -74,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                     menu.findItem(R.id.challengeicon).setIcon(R.drawable.ic_icon_challenge_color);
                     menu.findItem(R.id.infoicon).setIcon(R.drawable.ic_icon_info_color);
 
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mypageFragment).commitAllowingStateLoss();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentMypage()).commitAllowingStateLoss();
                     break;
             }
             return true;

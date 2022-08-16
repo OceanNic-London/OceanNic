@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="323dp"
+            android:layout_height="55dp"
+            android:src="@drawable/round_challenge_checkbox_background"/>
+        <CheckBox
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:background="@drawable/round_challenge_checkbox_blue"
+            android:button="@android:color/transparent"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carrying water in a thermos"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/pretendard_regular"
+            android:layout_marginTop="17dp"
+            android:layout_marginLeft="44dp"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:layout_width="323dp"
+            android:layout_height="55dp"
+            android:src="@drawable/round_challenge_checkbox_background"/>
+        <CheckBox
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:background="@drawable/round_challenge_checkbox_green"
+            android:button="@android:color/transparent"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carrying water in a thermos"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/pretendard_regular"
+            android:layout_marginTop="17dp"
+            android:layout_marginLeft="44dp"/>
+    </FrameLayout>
+
+
+</LinearLayout>

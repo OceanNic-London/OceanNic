@@ -1,52 +1,87 @@
 package com.example.oceannic;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class CategoryAdapter extends BaseAdapter {
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
 
     ArrayList<OceanDebris> debrisArrayList = new ArrayList<>();
+    Context context;
+    String category;
 
-    TextView txt_category;
-
-    public CategoryAdapter(ArrayList<OceanDebris> respone) {
+    public CategoryAdapter(ArrayList<OceanDebris> respone, Context context, String category) {
         debrisArrayList = respone;
+        this.context = context;
+        this.category = category;
+    }
 
+    @NonNull
+    @Override
+    public CategoryAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
+        View view = inflater.inflate(R.layout.adapter_posts, viewGroup, false);
+
+        return new ViewHolder(view, context, category);
     }
 
     @Override
-    public int getCount() {
+    public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder holder, int position) {
+        OceanDebris oceanDebris = debrisArrayList.get(position);
+
+        holder.setItem(oceanDebris);
+    }
+
+    @Override
+    public int getItemCount() {
         return debrisArrayList.size();
     }
 
-    @Override
-    public Object getItem(int position) {
-        return debrisArrayList.get(position);
-    }
+    static class ViewHolder extends RecyclerView.ViewHolder{
 
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
+        TextView txt_wasteName;
+        CardView cardview;
+        Context context;
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        final Context context = parent.getContext();
+        String category;
 
-        if(convertView == null){
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.adapter_posts, parent, false);
+        FragmentTransaction transaction;
+
+        public ViewHolder(@NonNull View itemView, Context context, String category) {
+            super(itemView);
+
+            txt_wasteName = itemView.findViewById(R.id.txt_wasteName);
+            cardview = itemView.findViewById(R.id.cardview);
+            this.context = context;
+            this.category = category;
         }
 
-        txt_category = convertView.findViewById(R.id.txt_wasteName);
-        txt_category.setText(debrisArrayList.get(position).getName());
+        public void setItem(OceanDebris oceanDebris){
+            txt_wasteName.setText(oceanDebris.getName());
+            System.out.println(oceanDebris.getName() + "   " + txt_wasteName.getText());
 
-        return convertView;
+            cardview.setCardBackgroundColor(Color.TRANSPARENT);
+
+            itemView.setOnClickListener(v -> {
+                Intent intent = new Intent(context, ContentActivity.class);
+                intent.putExtra("name", oceanDebris.getName());
+                intent.putExtra("category", category);
+                context.startActivity(intent);
+            });
+        }
     }
 }

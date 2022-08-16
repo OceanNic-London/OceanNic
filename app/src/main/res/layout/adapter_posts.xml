@@ -3,7 +3,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <FrameLayout
+        android:id="@+id/detail_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <ImageView
@@ -28,4 +33,7 @@
             android:layout_marginTop="255dp"
             android:layout_marginLeft="115dp"/>
     </FrameLayout>
+
+
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

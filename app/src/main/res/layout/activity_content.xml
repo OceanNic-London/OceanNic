@@ -6,6 +6,7 @@
     android:orientation="vertical">
 
     <ImageButton
+        android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="71dp"
@@ -35,6 +36,7 @@
             android:layout_marginLeft="99dp"/>
     </FrameLayout>
     <TextView
+        android:id="@+id/txt_name"
         android:layout_width="334dp"
         android:layout_height="wrap_content"
         android:textSize="24sp"
@@ -44,6 +46,7 @@
         android:layout_marginLeft="17dp"
         android:layout_marginTop="27dp"/>
     <TextView
+        android:id="@+id/txt_description"
         android:layout_width="334dp"
         android:layout_height="wrap_content"
         android:textSize="14sp"
@@ -71,6 +74,7 @@
             android:layout_marginLeft="77dp"
             android:layout_marginTop="38dp"/>
         <TextView
+            android:id="@+id/txt_years"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="year"

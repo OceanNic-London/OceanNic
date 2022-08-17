@@ -20,6 +20,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -50,7 +51,7 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/shape_debris_img"
+                android:src="@drawable/challenge_savewater"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="14dp"/>
             <LinearLayout
@@ -88,7 +89,7 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/shape_debris_img"
+                android:src="@drawable/challenge_zerowaste"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="14dp"/>
             <LinearLayout
@@ -126,7 +127,7 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/shape_debris_img"
+                android:src="@drawable/challenge_recycle"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="14dp"/>
             <LinearLayout

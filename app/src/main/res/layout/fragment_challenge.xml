@@ -42,12 +42,11 @@
         android:layout_marginLeft="16dp">
         <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp">
+            android:layout_height="wrap_content">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/round_challengebox2"/>
+                android:src="@drawable/ic_info_test"/>
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -80,12 +79,11 @@
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="7dp">
+            android:layout_marginTop="10dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/round_challengebox2"/>
+                android:src="@drawable/ic_info_test"/>
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -118,12 +116,11 @@
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="7dp">
+            android:layout_marginTop="10dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/round_challengebox2"/>
+                android:src="@drawable/ic_info_test"/>
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"

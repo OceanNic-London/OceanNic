@@ -6,6 +6,8 @@
         <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22083333333333333" />
         <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/drawable/ic_icon_info_color.xml" value="0.2791666666666667" />
         <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22083333333333333" />
+        <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/drawable/round_challenge_checkbox_background.xml" value="0.24444444444444444" />
+        <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/drawable/round_challenge_checkbox_blue.xml" value="0.24444444444444444" />
         <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/layout/activity_challenge_detail.xml" value="0.47654784240150094" />
         <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/layout/activity_content.xml" value="0.2630208333333333" />
         <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/layout/activity_info.xml" value="0.22135416666666666" />
@@ -18,7 +20,7 @@
         <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/layout/adapter_challenge_checkbox.xml" value="0.33" />
         <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/layout/adapter_posts.xml" value="0.33" />
         <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/layout/fragment_category.xml" value="0.33" />
-        <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/layout/fragment_challenge.xml" value="0.2630208333333333" />
+        <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/layout/fragment_challenge.xml" value="0.67" />
         <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/layout/fragment_content.xml" value="0.2265625" />
         <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/layout/fragment_info.xml" value="0.25" />
         <entry key="..\:/android-sdk/AndroidProjects/OceanNic/app/src/main/res/layout/fragment_mypage.xml" value="0.24427083333333333" />

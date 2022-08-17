@@ -57,8 +57,8 @@ public class ChallengeDatailAdapter extends RecyclerView.Adapter<ChallengeDatail
     static class ViewHolder extends RecyclerView.ViewHolder{
 
         CardView cardview;
-        TextView txt_challenge1, txt_challenge2;
-        CheckBox chk_1, chk_2;
+        TextView txt_challenge1;
+        CheckBox chk_1;
 
         private DatabaseReference databaseReference;
 

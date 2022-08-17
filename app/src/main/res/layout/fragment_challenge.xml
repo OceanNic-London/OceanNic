@@ -47,23 +47,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_info_test"/>
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_challenve_savawater"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="14dp"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_challenve_savawater" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Day Challenge"
                     android:textSize="14sp"
-                    android:layout_marginTop="19dp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/pretendard_medium"/>
                 <TextView
@@ -74,6 +77,7 @@
                     android:textColor="@color/white"
                     android:fontFamily="@font/pretendard_light"
                     android:layout_marginTop="1dp"/>
+            </LinearLayout>
             </LinearLayout>
         </FrameLayout>
         <FrameLayout
@@ -84,33 +88,39 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_info_test"/>
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_challenge_zerowaste"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="14dp"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:orientation="vertical">
-                <TextView
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_challenge_zerowaste" />
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Day Challenge"
-                    android:textSize="14sp"
-                    android:layout_marginTop="19dp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/pretendard_medium"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Day Challenge"
-                    android:textSize="10sp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/pretendard_light"
-                    android:layout_marginTop="1dp"/>
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Day Challenge"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/pretendard_medium"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Day Challenge"
+                        android:textSize="10sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/pretendard_light"
+                        android:layout_marginTop="1dp"/>
+                </LinearLayout>
             </LinearLayout>
         </FrameLayout>
         <FrameLayout
@@ -121,37 +131,39 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_info_test"/>
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_challenge_zerowaste"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="14dp"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:orientation="vertical">
-                <TextView
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_challenge_recycel" />
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Day Challenge"
-                    android:textSize="14sp"
-                    android:layout_marginTop="19dp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/pretendard_medium"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Day Challenge"
-                    android:textSize="10sp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/pretendard_light"
-                    android:layout_marginTop="1dp"/>
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Day Challenge"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/pretendard_medium"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Day Challenge"
+                        android:textSize="10sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/pretendard_light"
+                        android:layout_marginTop="1dp"/>
+                </LinearLayout>
             </LinearLayout>
         </FrameLayout>
-
-
     </LinearLayout>
 
 </LinearLayout>

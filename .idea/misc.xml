@@ -14,7 +14,7 @@
         <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/drawable/round_info_problem.xml" value="0.1" />
         <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/drawable/shape_debris_img.xml" value="0.1" />
         <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/font/font.xml" value="0.21203703703703702" />
-        <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/layout/activity_content.xml" value="0.264" />
+        <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/layout/activity_content.xml" value="0.176" />
         <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/layout/activity_info.xml" value="0.1" />
         <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/layout/activity_login.xml" value="0.8800000000000001" />
         <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/layout/activity_main.xml" value="0.15789473684210525" />
@@ -24,7 +24,7 @@
         <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/layout/adapter_challenge_btn.xml" value="0.4" />
         <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/layout/adapter_posts.xml" value="0.19517543859649122" />
         <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/layout/fragment_category.xml" value="0.2" />
-        <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/layout/fragment_challenge.xml" value="0.176" />
+        <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/layout/fragment_challenge.xml" value="0.2" />
         <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/layout/fragment_info.xml" value="0.264" />
         <entry key="..\:/Users/HyoJung/Desktop/OceanNic/OceanNic/app/src/main/res/layout/fragment_mypage.xml" value="0.264" />

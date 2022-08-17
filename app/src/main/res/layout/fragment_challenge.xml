@@ -51,7 +51,7 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/challenge_savewater"
+                android:src="@drawable/ic_challenve_savawater"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="14dp"/>
             <LinearLayout
@@ -89,7 +89,7 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/challenge_zerowaste"
+                android:src="@drawable/ic_challenge_zerowaste"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="14dp"/>
             <LinearLayout
@@ -127,7 +127,7 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/challenge_recycle"
+                android:src="@drawable/ic_challenge_zerowaste"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="14dp"/>
             <LinearLayout

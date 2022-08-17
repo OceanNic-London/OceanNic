@@ -38,12 +38,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginLeft="10dp"
                 android:layout_gravity="bottom"
                 android:layout_marginBottom="30dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/pretendard_bold"
@@ -52,7 +52,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:fontFamily="@font/pretendard_regular"
                 android:textSize="12sp"
                 android:textColor="@color/white"
@@ -81,12 +80,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginLeft="10dp"
                 android:layout_gravity="bottom"
                 android:layout_marginBottom="30dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/pretendard_bold"
@@ -95,7 +94,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:textSize="12sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/pretendard_regular"
@@ -131,11 +129,11 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="bottom"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginBottom="30dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/pretendard_bold"
@@ -144,7 +142,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
                     android:textSize="12sp"
                     android:fontFamily="@font/pretendard_regular"
                     android:textColor="@color/white"
@@ -161,7 +158,6 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_category_box"/>
             <ImageView
@@ -175,11 +171,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:layout_marginBottom="30dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+
                 android:layout_marginBottom="5dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/pretendard_bold"
@@ -188,7 +185,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:textSize="12sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/pretendard_regular"

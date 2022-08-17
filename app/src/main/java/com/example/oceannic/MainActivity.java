@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     menu.findItem(R.id.infoicon).setIcon(R.drawable.ic_icon_info_svg);
                     menu.findItem(R.id.myicon).setIcon(R.drawable.ic_icon_mypage_svg);
 
-                    //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, homeFragment).commitAllowingStateLoss();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentHome()).commitAllowingStateLoss();
                     break;
 
                 case R.id.challengeicon:

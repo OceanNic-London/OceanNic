@@ -24,20 +24,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="152dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/plastic_plasticbottle"/>
+                android:src="@drawable/ic_plastic_plasticbottle"/>
             <ImageView
-                android:layout_width="152dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:src="@drawable/round_infobox"/>
+                android:src="@drawable/ic_category_box" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="30dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="134dp"
+                android:layout_marginBottom="5dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/pretendard_bold"
                 android:textSize="14sp"
@@ -46,47 +53,54 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="156dp"
                 android:fontFamily="@font/pretendard_regular"
                 android:textSize="12sp"
                 android:textColor="@color/white"
                 android:text="Polymer compounds\nunder heat and pressure"/>
+            </LinearLayout>
         </FrameLayout>
         <FrameLayout
             android:id="@+id/layout_2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="65dp"
-                android:layout_marginTop="58dp"
-                android:src="@drawable/paper_newspaper"/>
-            <ImageView
-                android:layout_width="152dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_marginLeft="40dp"
+
                 android:background="@android:color/transparent"
-                android:src="@drawable/round_infobox"/>
+                android:src="@drawable/ic_category_box"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_paper_newspaper"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="30dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="174dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/pretendard_bold"
                 android:textSize="14sp"
-                android:text="Paper"/>
+                android:text="Etc"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="196dp"
+                android:layout_marginLeft="10dp"
                 android:textSize="12sp"
-                android:fontFamily="@font/pretendard_regular"
                 android:textColor="@color/white"
+                android:fontFamily="@font/pretendard_regular"
                 android:text="A substance soaked\nin water and dried flatly"/>
+            </LinearLayout>
         </FrameLayout>
     </LinearLayout>
     <LinearLayout
@@ -102,21 +116,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="19dp"
-                    android:src="@drawable/clothing_shirt"/>
-                <ImageView
-                    android:layout_width="152dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/round_infobox"/>
+                    android:src="@drawable/ic_category_box"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_clothing_shirt"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="30dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="134dp"
+                    android:layout_marginBottom="5dp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/pretendard_bold"
                     android:textSize="14sp"
@@ -125,35 +145,42 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="156dp"
                     android:textSize="12sp"
                     android:fontFamily="@font/pretendard_regular"
                     android:textColor="@color/white"
                     android:text="A cloth material worn\nover the body"/>
+                </LinearLayout>
             </FrameLayout>
         </FrameLayout>
         <FrameLayout
             android:id="@+id/layout_4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="64dp"
-                android:layout_marginTop="58dp"
-                android:src="@drawable/oceandebris_test"/>
-            <ImageView
-                android:layout_width="152dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp"
+
                 android:background="@android:color/transparent"
-                android:src="@drawable/round_infobox"/>
+                android:src="@drawable/ic_category_box"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_etc"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="174dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/pretendard_bold"
                 android:textSize="14sp"
@@ -161,12 +188,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="196dp"
+                android:layout_marginLeft="10dp"
                 android:textSize="12sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/pretendard_regular"
                 android:text="Other rubbish"/>
+            </LinearLayout>
         </FrameLayout>
     </LinearLayout>
 

@@ -13,7 +13,7 @@
         android:layout_marginLeft="16dp"/>
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="649dp"
+            android:layout_height="match_parent"
             android:background="@drawable/round_challenge"
             android:layout_marginTop="21dp">
             <ImageButton

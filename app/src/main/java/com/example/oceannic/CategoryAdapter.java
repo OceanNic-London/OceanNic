@@ -18,8 +18,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-
 import java.util.ArrayList;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
@@ -83,7 +81,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             cardview.setCardBackgroundColor(Color.TRANSPARENT);
 
             String file_name = category + "_" + oceanDebris.getName().replaceAll("\\s+","");
-
 
             itemView.setOnClickListener(v -> {
                 Intent intent = new Intent(context, ContentActivity.class);

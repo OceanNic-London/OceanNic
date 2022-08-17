@@ -27,15 +27,12 @@ public class ContentActivity extends AppCompatActivity {
 
     String category, name;
 
-    private FragmentManager fragmentManager = getFragmentManager();
     private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content);
-
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
 
         category = getIntent().getStringExtra("category");
         name = getIntent().getStringExtra("name");

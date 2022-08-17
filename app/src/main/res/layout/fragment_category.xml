@@ -24,20 +24,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="152dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/plastic_plasticbottle"/>
+                android:src="@drawable/ic_plastic_plasticbottle"/>
             <ImageView
-                android:layout_width="152dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:src="@drawable/round_infobox"/>
+                android:src="@drawable/ic_category_box" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="134dp"
+                android:layout_marginTop="145dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/pretendard_bold"
                 android:textSize="14sp"
@@ -46,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="156dp"
+                android:layout_marginTop="167dp"
                 android:fontFamily="@font/pretendard_regular"
                 android:textSize="12sp"
                 android:textColor="@color/white"
@@ -57,32 +58,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="65dp"
-                android:layout_marginTop="58dp"
-                android:src="@drawable/paper_newspaper"/>
-            <ImageView
-                android:layout_width="152dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:layout_marginLeft="40dp"
                 android:background="@android:color/transparent"
-                android:src="@drawable/round_infobox"/>
+                android:src="@drawable/ic_category_box"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="76dp"
+                android:layout_marginTop="65dp"
+                android:src="@drawable/ic_paper_newspaper"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:layout_marginTop="174dp"
-                android:textColor="@color/white"
+                android:layout_marginTop="184dp"
                 android:fontFamily="@font/pretendard_bold"
-                android:textSize="14sp"
-                android:text="Paper"/>
+                android:text="Paper"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:layout_marginTop="196dp"
+                android:layout_marginTop="207dp"
                 android:textSize="12sp"
                 android:fontFamily="@font/pretendard_regular"
                 android:textColor="@color/white"
@@ -102,21 +104,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="19dp"
-                    android:src="@drawable/clothing_shirt"/>
-                <ImageView
-                    android:layout_width="152dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/round_infobox"/>
+                    android:src="@drawable/ic_category_box"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_clothing_shirt"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="134dp"
+                    android:layout_marginTop="145dp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/pretendard_bold"
                     android:textSize="14sp"
@@ -125,7 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="156dp"
+                    android:layout_marginTop="167dp"
                     android:textSize="12sp"
                     android:fontFamily="@font/pretendard_regular"
                     android:textColor="@color/white"
@@ -137,23 +139,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="64dp"
-                android:layout_marginTop="58dp"
-                android:src="@drawable/oceandebris_test"/>
-            <ImageView
-                android:layout_width="152dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="40dp"
                 android:background="@android:color/transparent"
-                android:src="@drawable/round_infobox"/>
+                android:src="@drawable/ic_category_box"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="83dp"
+                android:layout_marginTop="65dp"
+                android:src="@drawable/ic_etc"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:layout_marginTop="174dp"
+                android:layout_marginTop="184dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/pretendard_bold"
                 android:textSize="14sp"
@@ -162,7 +164,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:layout_marginTop="196dp"
+                android:layout_marginTop="207dp"
                 android:textSize="12sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/pretendard_regular"

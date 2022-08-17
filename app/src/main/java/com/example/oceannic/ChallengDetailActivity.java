@@ -27,7 +27,7 @@ import java.util.Set;
 public class ChallengDetailActivity extends AppCompatActivity {
 
     ImageButton btn_close;
-    TextView txt_topic;
+    TextView txt_topic, txt_successful, txt_all;
     RecyclerView recyclerView;
 
     String topic;
@@ -43,6 +43,8 @@ public class ChallengDetailActivity extends AppCompatActivity {
 
         btn_close = findViewById(R.id.btn_close);
         txt_topic = findViewById(R.id.txt_topic);
+        txt_successful = findViewById(R.id.txt_successful);
+        txt_all = findViewById(R.id.txt_all);
         recyclerView = findViewById(R.id.recyclerView);
 
         topic = getIntent().getStringExtra("topic");
@@ -57,6 +59,21 @@ public class ChallengDetailActivity extends AppCompatActivity {
         });
 
         txt_topic.setText(topic);
+
+        databaseReference.child("challenge").child(topic).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.getValue(Challenge.class) != null){
+                    long count = snapshot.getChildrenCount();
+                    txt_all.setText(String.valueOf(count));
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         databaseReference.child("challenge").child(topic).addChildEventListener(new ChildEventListener() {
             @Override

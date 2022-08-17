@@ -44,6 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="26dp">
                     <TextView
+                        android:id="@+id/txt_successful"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="01"
@@ -61,6 +62,7 @@
                         android:layout_marginLeft="22dp"
                         android:layout_marginTop="5dp"/>
                     <TextView
+                        android:id="@+id/txt_all"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="06"

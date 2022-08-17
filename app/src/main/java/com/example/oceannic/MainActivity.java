@@ -11,10 +11,15 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
     private FragmentManager fragmentManager = getSupportFragmentManager();
+
+    private FirebaseAuth firebaseAuth;
+    String email;
 
     Menu menu;
 
@@ -30,6 +35,16 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new ItemSelectedListener());
 
         menu=bottomNavigationView.getMenu();
+
+        // 로그인 유저 저장
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null){
+            email = user.getEmail();
+        }
+
+
 
     }
     class ItemSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener{

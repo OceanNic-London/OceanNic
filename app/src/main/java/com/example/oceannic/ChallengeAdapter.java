@@ -1,6 +1,7 @@
 package com.example.oceannic;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -65,7 +66,9 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
             cardView.setCardBackgroundColor(Color.TRANSPARENT);
 
             itemView.setOnClickListener(v -> {
-
+                Intent intent = new Intent(context, ChallengDetailActivity.class);
+                intent.putExtra("topic", topic);
+                context.startActivity(intent);
             });
 
         }

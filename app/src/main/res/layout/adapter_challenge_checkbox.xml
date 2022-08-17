@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        android:layout_marginBottom="10dp">
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -11,6 +18,7 @@
             android:layout_height="55dp"
             android:src="@drawable/round_challenge_checkbox_background"/>
         <CheckBox
+            android:id="@+id/chk_1"
             android:layout_width="19dp"
             android:layout_height="19dp"
             android:background="@drawable/round_challenge_checkbox_blue"
@@ -18,7 +26,8 @@
             android:layout_marginTop="18dp"
             android:layout_marginLeft="15dp"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/txt_challenge1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Carrying water in a thermos"
             android:textSize="14sp"
@@ -27,6 +36,8 @@
             android:layout_marginTop="17dp"
             android:layout_marginLeft="44dp"/>
     </FrameLayout>
+    </androidx.cardview.widget.CardView>
+    <!--
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,6 +47,7 @@
             android:layout_height="55dp"
             android:src="@drawable/round_challenge_checkbox_background"/>
         <CheckBox
+            android:id="@+id/chk_2"
             android:layout_width="19dp"
             android:layout_height="19dp"
             android:background="@drawable/round_challenge_checkbox_green"
@@ -43,6 +55,7 @@
             android:layout_marginTop="18dp"
             android:layout_marginLeft="15dp"/>
         <TextView
+            android:id="@+id/txt_challenge2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Carrying water in a thermos"
@@ -52,6 +65,6 @@
             android:layout_marginTop="17dp"
             android:layout_marginLeft="44dp"/>
     </FrameLayout>
-
+-->
 
 </LinearLayout>

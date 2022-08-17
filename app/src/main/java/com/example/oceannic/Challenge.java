@@ -1,10 +1,8 @@
 package com.example.oceannic;
 
-import java.util.ArrayList;
-
 public class Challenge {
     private String topic;
-    private ArrayList<String> challenge;
+    private String challenge_name;
 
     public String getTopic() {
         return topic;
@@ -14,16 +12,23 @@ public class Challenge {
         this.topic = topic;
     }
 
-    public ArrayList<String> getChallenge(int position) {
-        return challenge;
+    public String getChallenge_name() {
+        return challenge_name;
     }
 
-    public void setChallenge(ArrayList<String> challenge) {
-        this.challenge = challenge;
+    public void setChallenge_name(String challenge_name) {
+        this.challenge_name = challenge_name;
     }
 
-    public Challenge(String topic, ArrayList<String> challenge) {
+    public Challenge() {
+    }
+
+    public Challenge(String challenge_name) {
+        this.challenge_name = challenge_name;
+    }
+
+    public Challenge(String topic, String challenge_name) {
         this.topic = topic;
-        this.challenge = challenge;
+        this.challenge_name = challenge_name;
     }
 }

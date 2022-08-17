@@ -17,10 +17,6 @@
             android:background="@drawable/round_challenge"
             android:layout_marginTop="21dp">
             <ImageButton
-            android:layout_height="645dp"
-            android:background="@drawable/round_challenge"
-            android:layout_marginTop="21dp">
-            <ImageButton
                 android:id="@+id/btn_close"
                 android:layout_width="36dp"
                 android:layout_height="36dp"

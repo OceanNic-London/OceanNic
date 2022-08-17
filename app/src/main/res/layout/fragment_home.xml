@@ -63,8 +63,8 @@
         <ImageView
             android:layout_width="457dp"
             android:layout_height="484dp"
-            android:layout_marginTop="47dp"
-            android:src="@drawable/homebackground_0"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/home_0"
             android:layout_gravity="center"/>
     </LinearLayout>
 </LinearLayout>

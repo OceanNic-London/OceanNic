@@ -51,7 +51,7 @@
                 android:fontFamily="@font/pretendard_regular"
                 android:textSize="12sp"
                 android:textColor="@color/white"
-                android:text="info"/>
+                android:text="Polymer compounds\nunder heat and pressure"/>
         </FrameLayout>
         <FrameLayout
             android:id="@+id/layout_2"
@@ -87,7 +87,7 @@
                 android:textSize="12sp"
                 android:fontFamily="@font/pretendard_regular"
                 android:textColor="@color/white"
-                android:text="info"/>
+                android:text="A substance soaked\nin water and dried flatly"/>
         </FrameLayout>
     </LinearLayout>
     <LinearLayout
@@ -130,7 +130,7 @@
                     android:textSize="12sp"
                     android:fontFamily="@font/pretendard_regular"
                     android:textColor="@color/white"
-                    android:text="info"/>
+                    android:text="A cloth material worn\nover the body"/>
             </FrameLayout>
         </FrameLayout>
         <FrameLayout
@@ -167,7 +167,7 @@
                 android:textSize="12sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/pretendard_regular"
-                android:text="info"/>
+                android:text="Other rubbish"/>
         </FrameLayout>
     </LinearLayout>
 

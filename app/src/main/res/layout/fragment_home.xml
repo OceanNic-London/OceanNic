@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FragmentHome"
-    android:background="@drawable/home_background">
+    android:background="@drawable/homebackground_0">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
             android:layout_width="457dp"
             android:layout_height="484dp"
             android:layout_marginTop="47dp"
-            android:src="@drawable/home_0"
+            android:src="@drawable/homebackground_0"
             android:layout_gravity="center"/>
     </LinearLayout>
 </LinearLayout>

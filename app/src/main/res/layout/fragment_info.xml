@@ -28,10 +28,7 @@
             android:gravity="center"
             android:textSize="28sp"
             android:fontFamily="@font/pretendard_extra_bold"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@id/title"
-            app:layout_constraintRight_toRightOf="@id/title"
-            app:layout_constraintLeft_toLeftOf="@id/title"/>
+            android:textColor="@color/white" />
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

@@ -82,7 +82,7 @@ public class ChallengDetailActivity extends AppCompatActivity {
                     Challenge challenge = snapshot.getValue(Challenge.class);
                     String str = challenge.getChallenge_name();
 
-                    respone.add(0, new Challenge(str));
+                    respone.add(0, new Challenge(topic, str));
                     System.out.println("res : " + respone.get(0).getChallenge_name());
 
                     adapter = new ChallengeDatailAdapter(respone);

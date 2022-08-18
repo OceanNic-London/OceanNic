@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentHome"
-    android:background="@drawable/homebackground_0">
+    tools:context=".FragmentHome">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -63,10 +62,10 @@
             android:fontFamily="@font/kgthisisnotgoodbye"
             android:layout_marginTop="2dp"/>
         <ImageView
+            android:id="@+id/img_home"
             android:layout_width="457dp"
             android:layout_height="484dp"
             android:layout_marginTop="50dp"
-            android:src="@drawable/home_0"
             android:layout_gravity="center"/>
     </LinearLayout>
 </LinearLayout>

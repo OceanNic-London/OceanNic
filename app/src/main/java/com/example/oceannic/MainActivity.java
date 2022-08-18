@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new ItemSelectedListener());
 
+        bottomNavigationView.setItemIconTintList(null);
         menu=bottomNavigationView.getMenu();
 
         // 로그인 유저 저장
@@ -113,38 +114,19 @@ public class MainActivity extends AppCompatActivity {
             switch(menuItem.getItemId())
             {
                 case R.id.homeicon:
-                    menuItem.setIcon(R.drawable.ic_icon_home);    // 선택한 이미지 변경
-                    menu.findItem(R.id.challengeicon).setIcon(R.drawable.ic_icon_challenge_color);
-                    menu.findItem(R.id.infoicon).setIcon(R.drawable.ic_icon_info_color);
-                    menu.findItem(R.id.myicon).setIcon(R.drawable.ic_icon_mypage_color);
-
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentHome()).commitAllowingStateLoss();
                     break;
 
                 case R.id.challengeicon:
-                    menuItem.setIcon(R.drawable.ic_icon_challenge);    // 선택한 이미지 변경
-                    menu.findItem(R.id.homeicon).setIcon(R.drawable.ic_icon_home_color);
-                    menu.findItem(R.id.infoicon).setIcon(R.drawable.ic_icon_info_color);
-                    menu.findItem(R.id.myicon).setIcon(R.drawable.ic_icon_mypage_color);
-
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentChallenge()).commitAllowingStateLoss();
                     break;
 
                 case R.id.infoicon:
-                    menuItem.setIcon(R.drawable.ic_icon_info);    // 선택한 이미지 변경
-                    menu.findItem(R.id.homeicon).setIcon(R.drawable.ic_icon_home_color);
-                    menu.findItem(R.id.challengeicon).setIcon(R.drawable.ic_icon_challenge_color);
-                    menu.findItem(R.id.myicon).setIcon(R.drawable.ic_icon_mypage_color);
 
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentCategory()).commitAllowingStateLoss();
                     break;
 
                 case R.id.myicon:
-                    menuItem.setIcon(R.drawable.ic_icon_mypage);    // 선택한 이미지 변경
-                    menu.findItem(R.id.homeicon).setIcon(R.drawable.ic_icon_home_color);
-                    menu.findItem(R.id.challengeicon).setIcon(R.drawable.ic_icon_challenge_color);
-                    menu.findItem(R.id.infoicon).setIcon(R.drawable.ic_icon_info_color);
-
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentMypage()).commitAllowingStateLoss();
                     break;
             }

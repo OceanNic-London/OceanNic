@@ -3,14 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentHome"
-    android:background="@drawable/homebackground_0">
+    tools:context=".FragmentHome">
     <LinearLayout
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/home_50">
+        android:background="@drawable/home_25">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

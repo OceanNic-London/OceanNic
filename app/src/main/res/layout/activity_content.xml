@@ -20,16 +20,13 @@
         android:src="@drawable/title_debriscontnet"
         android:layout_marginTop="31dp"
         android:layout_marginLeft="16dp"/>
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/img_trash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="29dp"
-            android:layout_marginLeft="99dp"/>
-    </FrameLayout>
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_clothing_shirt"/>
     <TextView
         android:id="@+id/txt_name"
         android:layout_width="334dp"
@@ -85,7 +82,7 @@
             android:textColor="@color/white"
             android:fontFamily="@font/pretendard_bold"
             android:textSize="20sp"
-            android:layout_marginTop="6dp"/>
+/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="187dp"
@@ -108,8 +105,7 @@
             android:textColor="@color/white"
             android:fontFamily="@font/pretendard_bold"
             android:textSize="20sp"
-            android:gravity="center"
-            android:layout_marginTop="6dp" />
+            android:gravity="center" />
         </LinearLayout>
         </LinearLayout>
     </FrameLayout>

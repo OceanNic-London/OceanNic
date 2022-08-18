@@ -223,20 +223,17 @@
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-
                 <ImageView
                     android:layout_width="101dp"
                     android:layout_height="101dp"
                     android:layout_marginLeft="20dp"
                     android:src="@drawable/round_mypagebox" />
-
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginLeft="84dp"
                     android:layout_marginTop="13dp"
                     android:src="@drawable/ic_launcher_background"></de.hdodenhof.circleimageview.CircleImageView>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

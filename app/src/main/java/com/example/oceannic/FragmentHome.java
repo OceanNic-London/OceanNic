@@ -1,5 +1,7 @@
 package com.example.oceannic;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -35,8 +37,8 @@ public class FragmentHome extends Fragment {
 
     String email;
     String[] topic = {"Zero Waste", "Save Water", "Recycle"};
-    long count = 0;
-    int id_background, id_home;
+    long count = 0, total_cnt;
+    int id_background;
 
     private DatabaseReference databaseReference;
 
@@ -59,7 +61,6 @@ public class FragmentHome extends Fragment {
         if(user != null){
             email = user.getEmail();
             email = email.replace(".", "");
-
         }
 
         for(int i = 0; i < 3; i++){
@@ -73,29 +74,41 @@ public class FragmentHome extends Fragment {
 
                     txt_successful.setText(String.valueOf(count));
 
-                    if(finalI == 2){
-                        switch ((int) (count / 5)) {
-                            case 4:
-                                id_background = getResources().getIdentifier("home_100", "drawable", getContext().getPackageName());
-                                background.setBackgroundResource(id_background);
-                                break;
-                            case 3:
-                                id_background = getResources().getIdentifier("home_75", "drawable", getContext().getPackageName());
-                                background.setBackgroundResource(id_background);
-                                break;
-                            case 2:
-                                id_background = getResources().getIdentifier("home_50", "drawable", getContext().getPackageName());
-                                background.setBackgroundResource(id_background);
-                                break;
-                            case 1:
-                                id_background = getResources().getIdentifier("home_25", "drawable", getContext().getPackageName());
-                                background.setBackgroundResource(id_background);
-                                break;
-                            case 0:
-                                id_background = getResources().getIdentifier("home_0", "drawable", getContext().getPackageName());
-                                background.setBackgroundResource(id_background);
+                    databaseReference.child("challenge").child(topic[finalI]).addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            total_cnt += snapshot.getChildrenCount();
+
+                            if(finalI == 2){
+                                switch ((int) (count / 5)) {
+                                    case 4:
+                                        id_background = getResources().getIdentifier("home_100", "drawable", getContext().getPackageName());
+                                        background.setBackgroundResource(id_background);
+                                        break;
+                                    case 3:
+                                        id_background = getResources().getIdentifier("home_75", "drawable", getContext().getPackageName());
+                                        background.setBackgroundResource(id_background);
+                                        break;
+                                    case 2:
+                                        id_background = getResources().getIdentifier("home_50", "drawable", getContext().getPackageName());
+                                        background.setBackgroundResource(id_background);
+                                        break;
+                                    case 1:
+                                        id_background = getResources().getIdentifier("home_25", "drawable", getContext().getPackageName());
+                                        background.setBackgroundResource(id_background);
+                                        break;
+                                    case 0:
+                                        id_background = getResources().getIdentifier("home_0", "drawable", getContext().getPackageName());
+                                        background.setBackgroundResource(id_background);
+                                }
+                            }
                         }
-                    }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
                 }
 
                 @Override

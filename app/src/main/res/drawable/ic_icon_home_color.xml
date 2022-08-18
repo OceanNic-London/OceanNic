@@ -1,19 +1,7 @@
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="30dp"
-    android:height="30dp"
-    android:viewportWidth="30"
-    android:viewportHeight="30">
-  <group>
-    <clip-path
-        android:pathData="M0,2h29.7931v27h-29.7931z"/>
-    <path
-        android:pathData="M29.6237,13.334C29.6237,13.334 27.6424,11.1205 21.9345,15.4788C16.5449,19.5939 16.5026,15.4788 10.7703,15.4788C10.7703,15.4788 4.6749,17.4117 7.7547,20.5291C10.8345,23.6466 19.3039,24.5195 19.3039,24.5195C19.3039,24.5195 26.5581,24.2065 28.0941,20.8409C29.8008,17.0999 30.019,14.8553 29.6237,13.334Z"
-        android:fillColor="#377EC4"/>
-    <path
-        android:pathData="M11.925,17.8466C13.9603,18.712 6.914,13.8612 11.6684,9.9905C14.0424,8.0577 18.4696,9.367 18.6621,13.1704C22.1268,11.2999 20.6511,1.6357 10.8984,2.0097C-0.3851,2.5148 -1.0357,14.355 0.7608,19.343C0.9135,19.767 5.7655,15.2279 11.925,17.8466Z"
-        android:fillColor="#4792DD"/>
-    <path
-        android:pathData="M0.761,19.3433C0.761,19.3433 7.2414,14.1682 14.0426,18.9068C21.6663,24.219 24.1456,18.0339 29.1849,18.0339C29.1849,18.0339 26.7467,29.0075 14.3339,28.9988C3.135,28.1346 0.761,19.3433 0.761,19.3433Z"
-        android:fillColor="#60A2EF"/>
-  </group>
+<vector android:height="30.032442dp" android:viewportHeight="231.43"
+    android:viewportWidth="231.18" android:width="30dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#b6deff" android:pathData="M115.5,115.5m-115.5,0a115.5,115.5 0,1 1,231 0a115.5,115.5 0,1 1,-231 0"/>
+    <path android:fillColor="#377ec4" android:pathData="M171,123c-42,33 -42.33,0 -87,0 0,0 -47.5,15.5 -23.5,40.5s90,32 90,32c0,0 54.61,-3.45 68.5,-29.5 16,-30 12,-63 11,-65 0,0 -14.52,-12.95 -59,22Z"/>
+    <path android:fillColor="#4792dd" android:pathData="M93,142c15.86,6.94 -39.05,-31.96 -2,-63 18.5,-15.5 53,-5 54.5,25.5 27,-15 15.5,-92.5 -60.5,-89.5C0,24 -8,114 6,154c1.19,3.4 39,-33 87,-12Z"/>
+    <path android:fillColor="#60a2ef" android:pathData="M6,154s50.5,-41.5 103.5,-3.5c59.41,42.6 78.73,-7 118,-7 0,0 -19,88 -115.73,87.93C24.5,224.5 6,154 6,154Z"/>
 </vector>

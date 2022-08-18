@@ -20,15 +20,12 @@
         android:src="@drawable/title_debriscontnet"
         android:layout_marginTop="31dp"
         android:layout_marginLeft="16dp"/>
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="29dp"
-            android:layout_marginLeft="99dp"/>
-    </FrameLayout>
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_clothing_shirt"/>
     <TextView
         android:id="@+id/txt_name"
         android:layout_width="334dp"

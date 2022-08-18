@@ -32,7 +32,6 @@ public class FragmentHome extends Fragment {
 
     TextView txt_successful, txt_startDate;
     LinearLayout background;
-    ImageView img_home;
 
     String email;
     String[] topic = {"Zero Waste", "Save Water", "Recycle"};
@@ -48,8 +47,7 @@ public class FragmentHome extends Fragment {
 
         txt_successful = viewGroup.findViewById(R.id.txt_successful);
         txt_startDate = viewGroup.findViewById(R.id.txt_startDate);
-        background = viewGroup.findViewById(R.id.backgroud);
-        img_home = viewGroup.findViewById(R.id.img_home);
+        background = viewGroup.findViewById(R.id.layout_background);
 
         Date today = new Date();
         Calendar calendar = Calendar.getInstance();
@@ -78,34 +76,24 @@ public class FragmentHome extends Fragment {
                     if(finalI == 2){
                         switch ((int) (count / 5)) {
                             case 4:
-                                id_background = getResources().getIdentifier("homebackground_100", "drawable", getContext().getPackageName());
+                                id_background = getResources().getIdentifier("home_100", "drawable", getContext().getPackageName());
                                 background.setBackgroundResource(id_background);
-                                id_home = getResources().getIdentifier("home_100", "drawable", getContext().getPackageName());
-                                img_home.setBackgroundResource(id_home);
                                 break;
                             case 3:
-                                id_background = getResources().getIdentifier("homebackground_75", "drawable", getContext().getPackageName());
+                                id_background = getResources().getIdentifier("home_75", "drawable", getContext().getPackageName());
                                 background.setBackgroundResource(id_background);
-                                id_home = getResources().getIdentifier("home_75", "drawable", getContext().getPackageName());
-                                img_home.setBackgroundResource(id_home);
                                 break;
                             case 2:
-                                id_background = getResources().getIdentifier("homebackground_50", "drawable", getContext().getPackageName());
+                                id_background = getResources().getIdentifier("home_50", "drawable", getContext().getPackageName());
                                 background.setBackgroundResource(id_background);
-                                id_home = getResources().getIdentifier("home_50", "drawable", getContext().getPackageName());
-                                img_home.setBackgroundResource(id_home);
                                 break;
                             case 1:
-                                id_background = getResources().getIdentifier("homebackground_25", "drawable", getContext().getPackageName());
+                                id_background = getResources().getIdentifier("home_25", "drawable", getContext().getPackageName());
                                 background.setBackgroundResource(id_background);
-                                id_home = getResources().getIdentifier("home_25", "drawable", getContext().getPackageName());
-                                img_home.setBackgroundResource(id_home);
                                 break;
                             case 0:
-                                id_background = getResources().getIdentifier("homebackground_0", "drawable", getContext().getPackageName());
+                                id_background = getResources().getIdentifier("home_0", "drawable", getContext().getPackageName());
                                 background.setBackgroundResource(id_background);
-                                id_home = getResources().getIdentifier("home_0", "drawable", getContext().getPackageName());
-                                img_home.setBackgroundResource(id_home);
                         }
                     }
                 }

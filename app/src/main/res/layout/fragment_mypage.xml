@@ -152,6 +152,7 @@
                     android:textSize="8sp" />
 
                 <TextView
+                    android:id="@+id/txt_success_challenge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="13dp"
@@ -200,6 +201,7 @@
                     android:textSize="8sp" />
 
                 <TextView
+                    android:id="@+id/txt_start_Date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="34dp"
@@ -245,12 +247,13 @@
                     android:textSize="8sp" />
 
                 <TextView
+                    android:id="@+id/txt_week"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="34dp"
                     android:layout_marginTop="62dp"
                     android:fontFamily="@font/pretendard_bold"
-                    android:text="35"
+                    android:text="10"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 

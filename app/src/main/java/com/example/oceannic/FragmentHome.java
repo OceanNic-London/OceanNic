@@ -1,5 +1,7 @@
 package com.example.oceannic;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -32,12 +34,11 @@ public class FragmentHome extends Fragment {
 
     TextView txt_successful, txt_startDate;
     LinearLayout background;
-    ImageView img_home;
 
     String email;
     String[] topic = {"Zero Waste", "Save Water", "Recycle"};
-    long count = 0;
-    int id_background, id_home;
+    long count = 0, total_cnt;
+    int id_background;
 
     private DatabaseReference databaseReference;
 
@@ -48,8 +49,7 @@ public class FragmentHome extends Fragment {
 
         txt_successful = viewGroup.findViewById(R.id.txt_successful);
         txt_startDate = viewGroup.findViewById(R.id.txt_startDate);
-        background = viewGroup.findViewById(R.id.backgroud);
-        img_home = viewGroup.findViewById(R.id.img_home);
+        background = viewGroup.findViewById(R.id.layout_background);
 
         Date today = new Date();
         Calendar calendar = Calendar.getInstance();
@@ -61,7 +61,6 @@ public class FragmentHome extends Fragment {
         if(user != null){
             email = user.getEmail();
             email = email.replace(".", "");
-
         }
 
         for(int i = 0; i < 3; i++){
@@ -75,39 +74,41 @@ public class FragmentHome extends Fragment {
 
                     txt_successful.setText(String.valueOf(count));
 
-                    if(finalI == 2){
-                        switch ((int) (count / 5)) {
-                            case 4:
-                                id_background = getResources().getIdentifier("homebackground_100", "drawable", getContext().getPackageName());
-                                background.setBackgroundResource(id_background);
-                                id_home = getResources().getIdentifier("home_100", "drawable", getContext().getPackageName());
-                                img_home.setBackgroundResource(id_home);
-                                break;
-                            case 3:
-                                id_background = getResources().getIdentifier("homebackground_75", "drawable", getContext().getPackageName());
-                                background.setBackgroundResource(id_background);
-                                id_home = getResources().getIdentifier("home_75", "drawable", getContext().getPackageName());
-                                img_home.setBackgroundResource(id_home);
-                                break;
-                            case 2:
-                                id_background = getResources().getIdentifier("homebackground_50", "drawable", getContext().getPackageName());
-                                background.setBackgroundResource(id_background);
-                                id_home = getResources().getIdentifier("home_50", "drawable", getContext().getPackageName());
-                                img_home.setBackgroundResource(id_home);
-                                break;
-                            case 1:
-                                id_background = getResources().getIdentifier("homebackground_25", "drawable", getContext().getPackageName());
-                                background.setBackgroundResource(id_background);
-                                id_home = getResources().getIdentifier("home_25", "drawable", getContext().getPackageName());
-                                img_home.setBackgroundResource(id_home);
-                                break;
-                            case 0:
-                                id_background = getResources().getIdentifier("homebackground_0", "drawable", getContext().getPackageName());
-                                background.setBackgroundResource(id_background);
-                                id_home = getResources().getIdentifier("home_0", "drawable", getContext().getPackageName());
-                                img_home.setBackgroundResource(id_home);
+                    databaseReference.child("challenge").child(topic[finalI]).addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            total_cnt += snapshot.getChildrenCount();
+
+                            if(finalI == 2){
+                                switch ((int) (count / 5)) {
+                                    case 4:
+                                        id_background = getResources().getIdentifier("home_100", "drawable", getContext().getPackageName());
+                                        background.setBackgroundResource(id_background);
+                                        break;
+                                    case 3:
+                                        id_background = getResources().getIdentifier("home_75", "drawable", getContext().getPackageName());
+                                        background.setBackgroundResource(id_background);
+                                        break;
+                                    case 2:
+                                        id_background = getResources().getIdentifier("home_50", "drawable", getContext().getPackageName());
+                                        background.setBackgroundResource(id_background);
+                                        break;
+                                    case 1:
+                                        id_background = getResources().getIdentifier("home_25", "drawable", getContext().getPackageName());
+                                        background.setBackgroundResource(id_background);
+                                        break;
+                                    case 0:
+                                        id_background = getResources().getIdentifier("home_0", "drawable", getContext().getPackageName());
+                                        background.setBackgroundResource(id_background);
+                                }
+                            }
                         }
-                    }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
                 }
 
                 @Override

@@ -1,5 +1,6 @@
 package com.example.oceannic;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.ChildEventListener;
@@ -29,9 +31,12 @@ public class FragmentChallenge extends Fragment {
 
     RecyclerView recyclerView;
     TextView txt_topic_1, txt_topic_2, txt_topic_3, txt_des_1, txt_des_2, txt_des_3;
+    ImageView img_1, img_2, img_3;
 
     ArrayList<String> respone = new ArrayList<>();
     ChallengeAdapter adapter;
+
+    Drawable zerowaste, savewater, recycle;
 
     long[] children_cnt = new long[3];
     String[] arr_topic = {"Zero Waste", "Save Water", "Recycle"};
@@ -56,6 +61,9 @@ public class FragmentChallenge extends Fragment {
         txt_des_1 = viewGroup.findViewById(R.id.txt_des_1);
         txt_des_2 = viewGroup.findViewById(R.id.txt_des_2);
         txt_des_3 = viewGroup.findViewById(R.id.txt_des_3);
+        img_1 = viewGroup.findViewById(R.id.img_1);
+        img_2 = viewGroup.findViewById(R.id.img_2);
+        img_3 = viewGroup.findViewById(R.id.img_3);
 
         random_topic[0] = (int) (Math.random() * 3);
         random_topic[1] = (int) (Math.random() * 3);
@@ -64,6 +72,28 @@ public class FragmentChallenge extends Fragment {
         txt_topic_1.setText(arr_topic[random_topic[0]]);
         txt_topic_2.setText(arr_topic[random_topic[1]]);
         txt_topic_3.setText(arr_topic[random_topic[2]]);
+
+        zerowaste = getResources().getDrawable(R.drawable.ic_challenge_zerowaste);
+        savewater = getResources().getDrawable(R.drawable.ic_challenge_savewater);
+        recycle = getResources().getDrawable(R.drawable.ic_challenge_recycle);
+
+        switch (random_topic[0]){
+            case 0: img_1.setImageDrawable(zerowaste); break;
+            case 1: img_1.setImageDrawable(savewater); break;
+            case 2: img_1.setImageDrawable(recycle); break;
+        }
+
+        switch (random_topic[1]){
+            case 0: img_2.setImageDrawable(zerowaste); break;
+            case 1: img_2.setImageDrawable(savewater); break;
+            case 2: img_2.setImageDrawable(recycle); break;
+        }
+
+        switch (random_topic[2]){
+            case 0: img_3.setImageDrawable(zerowaste); break;
+            case 1: img_3.setImageDrawable(savewater); break;
+            case 2: img_3.setImageDrawable(recycle); break;
+        }
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
         databaseReference.child("challenge").addChildEventListener(new ChildEventListener() {

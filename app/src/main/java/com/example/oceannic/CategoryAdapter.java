@@ -62,8 +62,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
         String category;
 
-        FragmentTransaction transaction;
-
         public ViewHolder(@NonNull View itemView, Context context, String category) {
             super(itemView);
 
@@ -81,6 +79,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             cardview.setCardBackgroundColor(Color.TRANSPARENT);
 
             String file_name = category + "_" + oceanDebris.getName().replaceAll("\\s+","");
+            file_name = file_name.replaceAll(",", "");
+            int id = context.getResources().getIdentifier("ic_" + file_name, "drawable", context.getPackageName());
+            img_trash.setImageResource(id);
 
             itemView.setOnClickListener(v -> {
                 Intent intent = new Intent(context, ContentActivity.class);

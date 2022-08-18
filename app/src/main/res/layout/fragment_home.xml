@@ -11,7 +11,7 @@
         android:orientation="vertical"
         android:background="@drawable/home_25">
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:orientation="vertical">
@@ -25,6 +25,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_home_turtleshell"/>
             <TextView
+                android:id="@+id/txt_successful"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="13"
@@ -47,6 +48,7 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/kgthisisnotgoodbye"/>
             <TextView
+                android:id="@+id/txt_startDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
@@ -64,6 +66,11 @@
             android:textColor="@color/white"
             android:fontFamily="@font/kgthisisnotgoodbye"
             android:layout_marginTop="2dp"/>
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/img_home"
+            android:layout_width="457dp"
+            android:layout_height="484dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"/>
     </LinearLayout>
 </LinearLayout>

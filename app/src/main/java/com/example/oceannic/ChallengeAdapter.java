@@ -62,7 +62,6 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
 
         String checked = "";
         String email;
-        int successful_cnt = 0;
 
         private DatabaseReference databaseReference;
         private FirebaseAuth firebaseAuth;

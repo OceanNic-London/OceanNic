@@ -24,6 +24,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity {
 
     private FragmentManager fragmentManager = getSupportFragmentManager();
@@ -31,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private DatabaseReference mDatabase;
     String email;
+    boolean chk_user = true;
 
     Menu menu;
 
@@ -63,16 +67,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addUser(String email){
-        User user = new User(email);
+        long now = System.currentTimeMillis();
+        Date date = new Date(now);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String getTime = sdf.format(date);
+
+        User user = new User(email, getTime);
 
         mDatabase.child("users").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 System.out.println(snapshot.getValue());
-                String key = snapshot.getKey();
-                if(snapshot.getKey() != null){
+                String key = snapshot.child(email).getKey();
+                System.out.println(key);
 
-                }else{
+                if(email.equals(key)) chk_user = false;
+
+                if(snapshot.getKey() != null && chk_user){
                     mDatabase.child("users").child(email).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
@@ -85,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.makeText(getApplicationContext(), "유저 저장 실패", Toast.LENGTH_SHORT).show();
                                 }
                             });
+                }else{
+
                 }
             }
 

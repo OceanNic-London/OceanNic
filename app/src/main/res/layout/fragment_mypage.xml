@@ -139,7 +139,7 @@
                     android:layout_height="24dp"
                     android:layout_marginLeft="63dp"
                     android:layout_marginTop="13dp"
-                    android:src="@drawable/ic_launcher_background"></de.hdodenhof.circleimageview.CircleImageView>
+                    android:src="@drawable/mypage_history"></de.hdodenhof.circleimageview.CircleImageView>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -187,7 +187,7 @@
                     android:layout_height="24dp"
                     android:layout_marginLeft="84dp"
                     android:layout_marginTop="13dp"
-                    android:src="@drawable/ic_launcher_background"></de.hdodenhof.circleimageview.CircleImageView>
+                    android:src="@drawable/ic_mypage_data"></de.hdodenhof.circleimageview.CircleImageView>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -233,14 +233,14 @@
                     android:layout_height="24dp"
                     android:layout_marginLeft="84dp"
                     android:layout_marginTop="13dp"
-                    android:src="@drawable/ic_launcher_background"></de.hdodenhof.circleimageview.CircleImageView>
+                    android:src="@drawable/ic_mypage_percent"></de.hdodenhof.circleimageview.CircleImageView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="34dp"
                     android:layout_marginTop="52dp"
                     android:fontFamily="@font/pretendard_bold"
-                    android:text="HISTORY"
+                    android:text="WEEK"
                     android:textColor="#C7C7C7"
                     android:textSize="8sp" />
 
@@ -250,7 +250,7 @@
                     android:layout_marginLeft="34dp"
                     android:layout_marginTop="62dp"
                     android:fontFamily="@font/pretendard_bold"
-                    android:text="07"
+                    android:text="35"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -260,7 +260,7 @@
                     android:layout_marginLeft="54dp"
                     android:layout_marginTop="72dp"
                     android:fontFamily="@font/pretendard_bold"
-                    android:text="test"
+                    android:text="%"
                     android:textColor="@color/black"
                     android:textSize="6sp" />
             </FrameLayout>

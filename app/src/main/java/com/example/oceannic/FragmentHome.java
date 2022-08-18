@@ -8,8 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -28,11 +31,13 @@ public class FragmentHome extends Fragment {
     ViewGroup viewGroup;
 
     TextView txt_successful, txt_startDate;
+    LinearLayout background;
+    ImageView img_home;
 
     String email;
-    String start_date;
     String[] topic = {"Zero Waste", "Save Water", "Recycle"};
     long count = 0;
+    int id_background, id_home;
 
     private DatabaseReference databaseReference;
 
@@ -43,6 +48,12 @@ public class FragmentHome extends Fragment {
 
         txt_successful = viewGroup.findViewById(R.id.txt_successful);
         txt_startDate = viewGroup.findViewById(R.id.txt_startDate);
+        background = viewGroup.findViewById(R.id.backgroud);
+        img_home = viewGroup.findViewById(R.id.img_home);
+
+        Date today = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(today);
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
@@ -54,12 +65,49 @@ public class FragmentHome extends Fragment {
         }
 
         for(int i = 0; i < 3; i++){
+            int finalI = i;
             databaseReference.child("users").child(email).child("topic").child(topic[i]).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     count += snapshot.getChildrenCount();
 
+                    System.out.println(count);
+
                     txt_successful.setText(String.valueOf(count));
+
+                    if(finalI == 2){
+                        switch ((int) (count / 5)) {
+                            case 4:
+                                id_background = getResources().getIdentifier("homebackground_100", "drawable", getContext().getPackageName());
+                                background.setBackgroundResource(id_background);
+                                id_home = getResources().getIdentifier("home_100", "drawable", getContext().getPackageName());
+                                img_home.setBackgroundResource(id_home);
+                                break;
+                            case 3:
+                                id_background = getResources().getIdentifier("homebackground_75", "drawable", getContext().getPackageName());
+                                background.setBackgroundResource(id_background);
+                                id_home = getResources().getIdentifier("home_75", "drawable", getContext().getPackageName());
+                                img_home.setBackgroundResource(id_home);
+                                break;
+                            case 2:
+                                id_background = getResources().getIdentifier("homebackground_50", "drawable", getContext().getPackageName());
+                                background.setBackgroundResource(id_background);
+                                id_home = getResources().getIdentifier("home_50", "drawable", getContext().getPackageName());
+                                img_home.setBackgroundResource(id_home);
+                                break;
+                            case 1:
+                                id_background = getResources().getIdentifier("homebackground_25", "drawable", getContext().getPackageName());
+                                background.setBackgroundResource(id_background);
+                                id_home = getResources().getIdentifier("home_25", "drawable", getContext().getPackageName());
+                                img_home.setBackgroundResource(id_home);
+                                break;
+                            case 0:
+                                id_background = getResources().getIdentifier("homebackground_0", "drawable", getContext().getPackageName());
+                                background.setBackgroundResource(id_background);
+                                id_home = getResources().getIdentifier("home_0", "drawable", getContext().getPackageName());
+                                img_home.setBackgroundResource(id_home);
+                        }
+                    }
                 }
 
                 @Override
@@ -72,6 +120,19 @@ public class FragmentHome extends Fragment {
         databaseReference.child("users").child(email).child("date").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String str_date = (String) snapshot.getValue();
+                try {
+                    Date start_date = new SimpleDateFormat("yyyy-MM-dd").parse(str_date);
+                    Calendar calendar2 = Calendar.getInstance();
+                    calendar2.setTime(start_date);
+
+                    long diffSec = (calendar.getTimeInMillis() - calendar2.getTimeInMillis()) / 1000;
+                    long diffDays = diffSec / (24*60*60);
+
+                    txt_startDate.setText(String.valueOf(diffDays + 1));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
             }
 
             @Override

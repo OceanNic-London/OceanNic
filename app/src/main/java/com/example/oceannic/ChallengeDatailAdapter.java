@@ -79,8 +79,6 @@ public class ChallengeDatailAdapter extends RecyclerView.Adapter<ChallengeDatail
         public void setItem(Challenge challenge){
             txt_challenge1.setText(challenge.getChallenge_name());
 
-            cardview.setCardBackgroundColor(Color.TRANSPARENT);
-
             chk_1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

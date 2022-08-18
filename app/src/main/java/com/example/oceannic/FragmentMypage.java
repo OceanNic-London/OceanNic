@@ -135,7 +135,7 @@ public class FragmentMypage extends Fragment {
             @Override
             public void onClick(View v) {
                 firebaseAuth.signOut();
-                Toast.makeText(getContext(), "로그아웃 되었습니다.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "LogOut", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getContext(), LoginActivity.class);
                 startActivity(intent);
             }

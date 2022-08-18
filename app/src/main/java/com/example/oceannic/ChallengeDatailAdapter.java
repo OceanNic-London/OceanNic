@@ -80,13 +80,46 @@ public class ChallengeDatailAdapter extends RecyclerView.Adapter<ChallengeDatail
         public void setItem(Challenge challenge){
             txt_challenge1.setText(challenge.getChallenge_name());
 
+            databaseReference.child("users").child(user_email).child("topic").child(challenge.getTopic()).addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                    System.out.println(snapshot.getKey());
+                    if(challenge.getChallenge_name().equals(snapshot.getKey())){
+                        System.out.println("chk " );
+                        chk_1.setChecked(true);
+                    }
+                }
+
+                @Override
+                public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+                }
+
+                @Override
+                public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+                }
+
+                @Override
+                public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
             chk_1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
                     if(chk_1.isChecked()){
+                        chk_1.setChecked(true);
                         databaseReference.child("users").child(user_email).child("topic").child(challenge.getTopic()).child((String) txt_challenge1.getText()).setValue(txt_challenge1.getText());
                     }else{
+                        chk_1.setChecked(false);
                         databaseReference.child("users").child(user_email).child("topic").child(challenge.getTopic()).child((String) txt_challenge1.getText()).removeValue();
                     }
                 }

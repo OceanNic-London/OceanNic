@@ -53,12 +53,14 @@
                 android:orientation="horizontal"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="9dp">
-            <ImageView
-                android:id="@+id/img_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_challenge_savewater" />
-            <LinearLayout
+
+                <ImageView
+                    android:id="@+id/img_1"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_challenge_savewater" />
+
+                <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -100,13 +102,14 @@
                 android:layout_marginLeft="9dp">
                 <ImageView
                     android:id="@+id/img_2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_challenge_zerowaste" />
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/txt_topic_2"
@@ -141,10 +144,10 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="17dp">
+                android:layout_marginLeft="9dp">
                 <ImageView
                     android:id="@+id/img_3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_challenge_recycle" />
                 <LinearLayout

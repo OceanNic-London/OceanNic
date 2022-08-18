@@ -24,6 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <ImageView
+            android:id="@+id/img_trash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="29dp"
@@ -100,6 +101,7 @@
             android:fontFamily="@font/pretendard_regular"
             android:layout_marginTop="13dp" />
         <TextView
+            android:id="@+id/txt_synthetic_resin"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="quality"

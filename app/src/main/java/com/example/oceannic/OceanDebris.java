@@ -4,13 +4,15 @@ public class OceanDebris {
     private String name;
     private String description;
     private String years;
+    private String synthetic_resin;
 
     public OceanDebris() {}
 
-    public OceanDebris(String name, String description, String years) {
+    public OceanDebris(String name, String description, String years, String synthetic_resin) {
         this.name = name;
         this.description = description;
         this.years = years;
+        this.synthetic_resin = synthetic_resin;
     }
 
     public OceanDebris(String name) {
@@ -39,5 +41,13 @@ public class OceanDebris {
 
     public void setYears(String years) {
         this.years = years;
+    }
+
+    public String getSynthetic_resin() {
+        return synthetic_resin;
+    }
+
+    public void setSynthetic_resin(String synthetic_resin) {
+        this.synthetic_resin = synthetic_resin;
     }
 }

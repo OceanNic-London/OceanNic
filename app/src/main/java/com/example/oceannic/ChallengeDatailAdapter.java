@@ -69,6 +69,7 @@ public class ChallengeDatailAdapter extends RecyclerView.Adapter<ChallengeDatail
 
             txt_challenge1 = itemView.findViewById(R.id.txt_challenge1);
             chk_1 = itemView.findViewById(R.id.chk_1);
+//            chk_1.setButtonDrawable(R.drawable.round_challenge_checkbox_blue);
             cardview = itemView.findViewById(R.id.cardview);
 
             databaseReference = FirebaseDatabase.getInstance().getReference();

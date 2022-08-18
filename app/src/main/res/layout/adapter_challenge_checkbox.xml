@@ -26,8 +26,8 @@
             android:id="@+id/chk_1"
             android:layout_width="19dp"
             android:layout_height="19dp"
-            android:background="@drawable/round_challenge_checkbox_blue"
             android:button="@android:color/transparent"
+            android:background="@drawable/round_challenge_checkbox_blue"
             android:layout_marginLeft="15dp"/>
         <TextView
             android:id="@+id/txt_challenge1"
